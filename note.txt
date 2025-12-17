@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 welcome to my world
 Yo! What's up man
+=======
+welcome to my home
+home
+>>>>>>> 4a3dc13f5da40f416870f518d9ee16c490861d3d
