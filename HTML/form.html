@@ -7,7 +7,13 @@
 </head>
 <body>
     
-<form action="register.html" method="get">
+<form action="register.html" method="get" enctype="multipart/form-data">
+
+    <div>
+        <label for="image"> Image </label>
+        <input type="file" name="image" id="image">
+    </div>
+    <br>
 
     <div>
         <label for="name">Name:</label>
@@ -54,7 +60,23 @@
 <input type="radio" id="female" name="gender" value="Female"><label for="female"> Female </label>
 
     </div>
+    <br>
+    <div>
+        <label for="education"> Education </label>
+        <select name="education" id="education">
+<option value="First year"> First year</option>
+<option value="Sceond year"> Sceond year </option>
 
+        </select>
+        
+    </div>
+
+    <br>
+
+    <div>
+        <label for="address"> Address </label><br>
+        <textarea name="address" id="address"> Address </textarea>
+    </div>
     <br>
 
     <button type="submit"> Register </button>
