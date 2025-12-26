@@ -9,20 +9,36 @@
 
 </head>
 
-<body background="images/bg.jpg">
+<body>
 
     <!-- Home -->
 
     <header>
+        <section style="background-color: azure;">
 
-        <table align="center">
+            <table align="center">
+                <tr>
+                    <td>
+                        <img src="images/logo.png" alt="">
+                    </td>
+                    <td>
+                        <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">DK Diamond
+                            Store
+                        </h1>
+                    </td>
+                </tr>
+
+            </table>
+        </section>
+        <br><br>
+        <table align="center" width="15%">
             <tr>
                 <td>
-                    <img src="images/logo.png" alt="">
+                    <img src="images/mlbb.jpg" alt="" width="100%">
                 </td>
                 <td>
-                    <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">DK Diamond Store
-                    </h1>
+                    <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Mobile Legend
+                        Bang Bang</h1>
                 </td>
             </tr>
 
@@ -137,68 +153,74 @@
     <!-- end diamond -->
 
     <br><br>
+    <br><br>
 
-    <!-- start id type section -->
+    <!--Start  Information -->
+
     <section>
-        <h2 align="center">INFORMATION</h2>
-        <hr width="20%">
+        <h2 align="center">Information</h2>
+        <hr width="20%"><br><br>
         <table align="center" width="30%">
             <tr>
                 <td>
-                    <form action="register.html" method="get">
+                    <form action="payment.html" method="get">
                         <div>
                             <label for="name"><b>Name</b></label><br>
-                            <input type="text" placeholder="Enter In Game Name" id="name" required>
+                            <input type="text" placeholder="Enter In Game Name" id="name" required name="name">
                         </div>
+                        <br>
+                        <form action="payment.html" method="get">
+                            <div>
+                                <label for="name"><b>Game ID</b></label><br>
+                                <input type="text" placeholder="Enter In Game ID" id="name" required name="ID">
+                            </div>
+                            <br>
+                            <div>
+                                <label for="name"><b>Zone ID</b></label><br>
+                                <input type="text" placeholder="Enter Zone ID" id="name" required name="Zone ID">
+                            </div>
+                            <br>
+                            <div>
+                                <label for="Ph No.">Ph No.</label><br>
+                                <input type="text" placeholder="Enter Phone Number" id="Ph No." required name="Ph No.">
+                            </div>
+                            <br>
+                            <div>
+                                <label for="image">Tranction Screenshot</label><br>
+                                <input type="file" placeholder="Enter Screenshot" id="image" required name="Screenshot">
+                            </div>
+                            <br>
+                            <button>Submit</button>
 
-                    </form>
+                        </form>
                 </td>
-                <td>
-                    <form action="register.html" method="get">
-                        <div>
-                            <label for="name"><b>Game ID</b></label><br>
-                            <input type="text" placeholder="Enter In Game ID" id="name" required>
-                        </div>
-
-                    </form>
-                </td>
-                <td>
-                    <form action="register.html" method="get">
-                        <div>
-                            <label for="name"><b>Zone ID</b></label><br>
-                            <input type="text" placeholder="Enter Zone ID" id="name" required>
-                        </div>
-
-                    </form>
-                </td>
-
             </tr>
 
         </table>
 
     </section>
-    <!-- end id type section -->
-
+    <!--End Information -->
+    <br><br>
     <br><br>
 
     <!-- Payment Method -->
     <section>
 
-        <h2 align="center">Payment Method</h2>
+        <h2 align="center">Avaliable Pay</h2>
         <hr width="20%">
         <br>
-        <table align="center" width="30%" border="1" cellpadding="10" cellspacing="0">
+        <table align="center" width="30%" cellpadding="10" cellspacing="0">
             <tr>
                 <td width="30%">
-                    <a href="#number"><img src="images/KBZ Pay.jpg" alt="" width="100%"></a>
+                    <img src="images/KBZ Pay.jpg" alt="" width="100%">
                     <h3 align="center">KBZ Pay</h3>
                 </td>
                 <td width="30%">
-                    <a href="#number"><img src="images/wave pay.jpg" alt="" width="100%"></a><br><br><br><br><br>
+                    <img src="images/wave pay.jpg" alt="" width="100%">
                     <h3 align="center">WAVE Pay</h3>
                 </td>
                 <td width="30%">
-                    <a href="#number"><img src="images/AYA Pay.jpg" alt="" width="100%"></a>
+                    <img src="images/AYA Pay.jpg" alt="" width="100%">
                     <h3 align="center">AYA Pay</h3>
                 </td>
             </tr>
@@ -206,51 +228,6 @@
 
     </section>
     <!-- end payment -->
-
-    <br><br>
-
-    <!-- Money Transfer Information -->
-
-    <section>
-        <h2 align="center">Transfer Information</h2>
-        <hr width="20%"><br><br>
-        <table align="center" width="30%" enctype="multipart/form-data">
-            <tr>
-                <td>
-                    <form action="payment.html" method="get">
-                        <div>
-                            <label for="number">Ph No.</label><br>
-                            <input type="text" placeholder="Enter Phone Number" id="number" required>
-                        </div>
-
-                    </form>
-                </td>
-                <td>
-                    <form action="payment.html" method="get">
-                        <div>
-                            <label for="name1">Payment App Name</label><br>
-                            <input type="text" placeholder="Enter Payment App Name" id="name" required>
-                        </div>
-
-                    </form>
-                </td>
-                <td>
-                    <form action="payment.html" method="get">
-                        <div>
-                            <label for="image">Transfer Screenshot</label><br>
-                            <input type="file" placeholder="Enter Screenshot" id="image" required>
-                        </div>
-
-                    </form>
-                </td>
-                <td>
-                    <button type="submit">Submit</button>
-                </td>
-            </tr>
-
-        </table>
-    </section>
-    <!-- end transfer information -->
 
     <br><br>
     <hr width="30%">
