@@ -1,4 +1,11 @@
-h1 {
-    color: aquamarine;
+*{
+    color: hsl(0, 0%, 0%);
     text-align: center;
+}
+h1{
+    color: #ff0000;
+}
+p{
+    text-indent: 5%;
+    text-align:left;
 }

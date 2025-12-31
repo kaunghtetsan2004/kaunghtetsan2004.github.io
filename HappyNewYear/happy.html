@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy New Year</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 3px;
+      animation: glow 2s infinite alternate;
+    }
+
+    h2 {
+      margin-top: 15px;
+      font-size: 2rem;
+      opacity: 0;
+      animation: slideUp 2s ease forwards;
+      animation-delay: 1s;
+    }
+    p{
+      margin-top: 15px;
+      font-size: 1rem;
+      opacity: 0;
+      animation: slideUp 2s ease forwards;
+      animation-delay: 2s;  
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #00e6ff, 0 0 20px #00e6ff;
+      }
+      to {
+        text-shadow: 0 0 20px #ffdd00, 0 0 40px #ffdd00;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎆 Happy New Year 🎆</h1>
+    <h2>Welcome 2026!</h2>
+    <br>
+    <p>
+        Happy New Year ပါချီးထုပ်လေး💥 <br>
+‎2026‌ရောက်လည်း မမ ကိုချစ်တဲ့ အချစ်တေက များကြီး ပိုပိုတိုးလာပါတယ်ဗျ <br>များကြီး" ချစ်တယ်❤️ အာဘွားး😘❤️ <br>မမ ကိုများကြီး ချစ်တာ မောင်" ဆိုးမိတာရှိရင်လည်း နားလည်ပေးပါနော် <br>ချီးထုပ်ကြတာလေးလည်းလျော့ပြီး 2026 ကို ဦးနှောက်အသစ်နဲ့ရှေ့ဆက်ပြီး ကောင်းတာတေပဲဖြစ်ပြီး <br> ဆန္ဒနဲ့ဖြစ်ချင်တာနဲ့ တထပ်တည်းကျပါစေနော်❤️ အာဘွားး😘❤️ မွမွ😘😘
+    </p>
+  </div>
+</body>
+</html>
