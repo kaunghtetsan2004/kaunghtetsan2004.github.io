@@ -1,0 +1,44 @@
+* {
+    color: red;
+}
+
+a[title="google"] {
+    text-decoration: none;
+}
+
+#idselector {
+    color: rgb(11, 38, 60);
+    text-align: center;
+}
+
+.classone {
+    color: rgb(28, 137, 234);
+}
+
+#idsc a {
+    color: rgb(0, 72, 255);
+    text-decoration: none;
+}
+
+#child>a {
+    color: aqua;
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: wavy underline;
+    color: green;
+}
+
+a:visited {
+    color: yellow;
+}
