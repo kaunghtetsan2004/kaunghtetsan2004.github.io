@@ -1,9 +1,11 @@
 *{
     color: hsl(0, 0%, 0%);
     text-align: center;
+    display:flex;
 }
 h1{
     color: #ff0000;
+    letter-spacing:3px;
 }
 p{
     text-indent: 5%;

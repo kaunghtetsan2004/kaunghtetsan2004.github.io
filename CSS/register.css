@@ -1,0 +1,37 @@
+body{
+    background-color: aqua;
+}
+#header{
+    color: red;
+    text-align: center;
+}
+form{
+    width: 40%;
+    margin: auto;
+}
+
+input[type="text"],input[type="email"],input[type="number"]{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid cornsilk;
+}
+input[type="text"]:focus,input[type="email"]:focus,input[type="number"]:focus{
+    border: 4px cornflowerblue;
+}
+input[type=radio]:checked+label{
+    color: red;
+    text-transform: uppercase;
+}
+input[type=checkbox]:enabled+label{
+    color: yellow;
+    font-style: italic;
+}
+nput[type=checkbox]:checked+label{
+    color: red;
+    font-style: normal;
+}
+input[type=checkbox]:disabled+label{
+    color: grey;
+}
