@@ -65,12 +65,12 @@ h4{
 
 p{
    color: #ffffff;
-    font-size: 10px;
+    font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
     text-align: left;
     letter-spacing: 1px;
     margin: auto; 
+    line-height: 1.7;
 }
 
 a{
@@ -103,7 +103,7 @@ a{
     text-align: left;
     letter-spacing: 1px;
     margin: auto;
-    line-height: 1.5;
+    line-height: 1.7;
 }
 
 .txt2{
@@ -115,5 +115,5 @@ a{
     text-align: left;
     letter-spacing: 1px;
     margin: auto;
-    line-height: 1.5;
+    line-height: 1.7;
 }
