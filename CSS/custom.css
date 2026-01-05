@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     color: red;
 }
@@ -41,4 +42,8 @@ a:active {
 
 a:visited {
     color: yellow;
+=======
+p:target {
+    color: red;
+>>>>>>> 0b0133336c75fea4456fdc56af7cdc545e6ad3bd
 }
