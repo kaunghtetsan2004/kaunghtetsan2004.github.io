@@ -1,13 +1,90 @@
 *{
-    color: hsl(0, 0%, 0%);
-    text-align: center;
-    display:flex;
+   margin: 0;
+   padding: 0;
 }
 h1{
     color: #ff0000;
     letter-spacing:3px;
+    text-align: center;
 }
-p{
+/* p{
     text-indent: 5%;
     text-align:left;
-}
+} */
+ .border1{
+    border: 10px solid red;
+
+ }
+ .border2{
+    border-style: solid dotted;
+ }
+ .border3{
+    border-width: 5px 10px 15px 20px ;
+    border-style: solid;
+ }
+ .Margin{
+    margin: 30px;
+
+ }
+ .padding{
+    padding: 50px;
+    border: 2px solid;
+ }
+ .about{
+    margin: 25% 0 0 90%;
+ }
+
+ .inline{
+    display: inline-block ;
+    width: 400px;
+    border: 1px solid red;
+ }
+ .block{
+    width: 400px;
+    border:1px solid red;
+    display: inline-block;
+ }
+ .left img{
+   width: 20%;
+   float: left;
+ }
+ .left p{
+   text-align: justify;
+   margin-top: 30px;
+   padding: 20px;
+ }
+
+ .right img{
+   width: 20%;
+   float: right;
+ }
+ .right p{
+   text-align: justify;
+   margin-top: 30px;
+   padding: 20px;
+ }
+
+ .clear{
+   clear: both;
+ }
+
+ .gridone div,.grid2 div,.grid3 div{
+   padding: 10px;
+   text-align: center;
+   color: #ffffff;
+ }
+ .gridone, .grid2, .grid3{
+   display: grid;
+   grid-template-columns: auto auto auto;
+ }
+
+ .columnadd{
+   grid-column-start: 1;
+   grid-column-end: 3;
+ }
+ .rowadd{
+   grid-row-start: 1;
+   grid-row-end: 3;
+   grid-column-start: 2;
+   
+ }
