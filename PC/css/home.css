@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-image: url(../images/background.jpg);
+    width: 100%;
+}
+
+/* start nav word */
+.navword {
+    color: #ffffff;
+    font-size: 95px;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.navword {
+    margin-top: 60px;
+}
+
+/* start nav */
+.nav {
+    margin-top: 40px;
+    margin-left: 30px;
+    position: fixed;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+/* .nav {
+    box-shadow: 2px 3px 5px rgba(255, 247, 247, 0.5);
+} */
+
+.nav button {
+    color: #ffffff;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    padding: 10px;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.nav button {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+}
+
+@font-face {
+    src: url('../Gravitas_One/GravitasOne-Regular.ttf');
+    font-family: 'a';
+}
+
+.nav div {
+    display: inline-block;
+}
+
+.nav button:hover {
+    transform: translateY(-3px);
+    transition-duration: 10ms;
+    color: #eeeded;
+}
+
+/* end nav word */
+/* start footer */
+.txt1 {
+    text-indent: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+.txt2 {
+    text-indent: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+.txt3 {
+    text-indent: 60px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+.slogan {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.slogan {
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+}
+
+.location {
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+.location {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
