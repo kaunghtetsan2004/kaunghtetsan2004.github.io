@@ -9,19 +9,28 @@ body {
     width: 100%;
 }
 
+
 /* start nav word */
 .navword {
     color: #ffffff;
-    font-size: 95px;
+    font-size: 80px;
     text-align: center;
     opacity: 0.5;
 }
 
 .navword {
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 /* start nav */
+
+.logo img {
+    position: absolute;
+    top: 20px;
+    right: 30%;
+    width: 80px;
+}
+
 .nav {
     margin-top: 40px;
     margin-left: 30px;
@@ -37,7 +46,8 @@ body {
     box-shadow: 2px 3px 5px rgba(255, 247, 247, 0.5);
 } */
 
-.nav button {
+.nav button,
+.sec button {
     color: #ffffff;
     text-decoration: none;
     outline: none;
@@ -58,7 +68,8 @@ body {
     font-family: 'a';
 }
 
-.nav div {
+.nav div,
+.sec div {
     display: inline-block;
 }
 
@@ -68,7 +79,88 @@ body {
     color: #eeeded;
 }
 
-/* end nav word */
+.bunner {
+    position: relative;
+}
+
+.bunner {
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    position: fixed;
+}
+
+
+.bunner input {
+    padding: 11.5px 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 7px 0 0 7px;
+
+}
+
+.bunner button {
+    padding: 11.5px 30px;
+    border: 1px solid #000000;
+    background-color: #f5d404;
+    color: #ffffff;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    border-radius: 0 7px 7px 0;
+}
+
+.userps {
+    position: absolute;
+    top: 40px;
+    right: 25px;
+    position: fixed;
+}
+
+.userps button {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+/* end nav  */
+/* start body */
+.promotion img {
+    position: absolute;
+    left: 26%;
+    width: 50%;
+}
+
+.txtser {
+    position: absolute;
+    bottom: 40%;
+    left: 40%;
+}
+
+.txtser input {
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #000000;
+}
+
+/* end body */
+
+.sec button {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sec {
+    position: absolute;
+    bottom: 13%;
+    right: 5px;
+}
+
+.sec button:hover {
+    color: #bab5b5;
+}
+
 /* start footer */
 .txt1 {
     text-indent: 0px;
@@ -99,12 +191,39 @@ body {
 .slogan {
     position: absolute;
     left: 10px;
-    bottom: 5px;
+    bottom: 15px;
 }
+
+.icon {
+    color: #ffffff;
+}
+
+.icon:hover {
+    transform: translateY(-8px);
+    transition-duration: 20ms;
+}
+
+
+.ps div {
+    position: absolute;
+    bottom: 5.5%;
+    left: 45%;
+}
+
+.icon a {
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+/* .icon:hover {
+    transform: translateY(-8px);
+} */
+
 
 .location {
     color: #ffffff;
-    font-size: 15px;
+    font-size: 17px;
     letter-spacing: 1px;
     line-height: 1.7;
 }
@@ -112,5 +231,19 @@ body {
 .location {
     position: absolute;
     right: 10px;
-    bottom: 5px;
+    bottom: 15px;
+}
+
+
+.hr3 {
+    position: absolute;
+    bottom: 11.4%;
+    width: 99.8%;
+}
+
+.bg {
+    border: #000000;
+    background: none #000000;
+    width: 90%;
+    margin-bottom: 20px;
 }
