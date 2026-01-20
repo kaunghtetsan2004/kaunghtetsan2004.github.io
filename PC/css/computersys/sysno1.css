@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.name img {
+    position: absolute;
+    left: 80px;
+}
+
+.name h3 {
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+}
+
+.name h3 {
+    font-size: 30px;
+    color: #ff0000;
+}
+
+.name button {
+    outline: none;
+    text-decoration: none;
+    border: 1px solid #000000;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #7a7a7a;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.name button {
+    position: absolute;
+    left: 35%;
+    top: 25%;
+}
+
+.name button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.bar {
+    position: absolute;
+    width: 70%;
+    right: 0px;
+    top: 40%;
+}
