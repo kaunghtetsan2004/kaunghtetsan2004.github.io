@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+
+<body>
+
+    <Script>
+
+        let firstName = 'Developer';
+        let lastName = 'Kaung Htet San';
+        console.log(firstName.length)
+
+        console.log(firstName);
+        console.log(lastName);
+
+        let fullName = firstName.concat('', lastName);
+        console.log(fullName);
+
+        console.log('My name is' + fullName);
+        document.write('<h1>' + firstName + '</h1><h2>' + lastName + '</h2>');
+        document.write(`<h1> ${firstName} </h1> <h2> ${lastName} </h2>`);
+
+        document.write(`<h1> My name is ${fullName} . I am 20 year old. My work is ${lastName} </h1>`)
+
+        console.log(firstName.toUpperCase());
+        console.log(firstName.toLowerCase());
+        console.log(firstName.substr(2, 4));
+
+        let job = '    web     developer.    '
+        console.log(job.trim());
+
+        let ser = 'JavaScript is funny!'
+        console.log(ser.search('is'));
+
+        let rep = ' I want to go Yangon';
+        console.log(rep.replace('Yangon', 'Mandalay'));
+
+        let num = '3-500-000'
+        console.log(num.replace(/\-/g, ''));
+
+
+
+    </Script>
+
+</body>
+
+</html>
