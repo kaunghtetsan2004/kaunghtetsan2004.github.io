@@ -104,72 +104,109 @@ body {
 
 /* end nav */
 
+/* start body */
 
-/* product */
-/* Cards */
-.card-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 180px;
-    flex-wrap: wrap;
-    margin-left: 5px;
+.word1 {
+    position: absolute;
+    top: 12%;
 }
 
-.card button {
-    border: none;
-    outline: none;
-    box-shadow: none;
-    background-color: transparent;
-    text-decoration: none;
-}
-
-.card {
-    width: 320px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.968);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-.card img {
+.word1 {
+    background-color: #665d5d;
+    height: 40px;
     width: 100%;
-    height: 270px;
-    object-fit: cover;
 }
 
-.card h3 {
-    padding: 18px 0;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
+.word h3 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+
+.word1 h2 {
+    position: absolute;
+    top: 13%;
+    left: 5%;
+}
+
+.word h3,
+h4,
+h5 {
     color: #ffffff;
-    text-transform: uppercase
+    font-size: 25px;
 }
 
-
-
-.ul a {
-    display: inline;
+.word1 h2 {
+    color: #ffffff;
 }
 
+.word h4 {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+}
 
+.word h5 {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    line-height: 1.4;
+}
 
-.buy a {
-    text-decoration: none;
-    color: #000000;
+.map {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 10px;
+    height: 10px;
+}
+
+.form {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+
+.form {
+    color: #ffffff;
+}
+
+.form input {
+    padding: 10px 100px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    text-align: center;
+
+}
+
+.form label {
     font-size: 20px;
 }
 
-.buy a {
-    border: 1px sold #ffffff;
-    color: #ffffff;
+.message input {
+    padding: 70px 100px;
+}
+
+.but button {
+
+    outline: none;
+    text-decoration: none;
     background-color: #000000;
-    padding: 10px 40px;
-    border-radius: 8px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+
+}
+
+.but button {
+    border: 1px dotted #000000;
+    padding: 10px 153px;
+    border-radius: 7px;
+
+}
+
+.but button:hover {
+    background-color: #665d5d;
+
 }
