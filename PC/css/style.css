@@ -9,8 +9,23 @@
     top: 150px;
     left: 30px;
 }
+@font-face{
+    src: url('../Gravitas_One/GravitasOne-Regular.ttf');
+    font-family: 'a';
+}
 
-/* navetion */
+.font1{
+    font-family: 'a';
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 70px;
+    opacity: 0.5;
+    color: #ffffff;
+    letter-spacing: 0.05rem;
+}
+/* end header */
+
+/* start nav */
 .pshome{
     position: absolute;
     top: 40%;
@@ -26,23 +41,22 @@
     top: 40%;
     left: 11.7%   
 }
-
-
-
-@font-face{
-    src: url('../Gravitas_One/GravitasOne-Regular.ttf');
-    font-family: 'a';
+.pspe{
+    position: absolute;
+    top: 40%;
+    left: 17%;   
+}
+.pscs{
+    position: absolute;
+    top: 40%;
+    left: 25.1%; 
+}
+.psct{
+    position: absolute;
+    top: 40%;
+    left: 36.5%; 
 }
 
-.font1{
-    font-family: 'a';
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 70px;
-    opacity: 0.5;
-    color: #ffffff;
-    letter-spacing: 0.05rem;
-}
 button{
     text-decoration: none;
     color: #ffffff;
@@ -57,4 +71,80 @@ button{
     outline: none;
     box-shadow: none;
     background-color:transparent;
+}
+/* end nav */
+
+hr{
+    color: #ffffff;
+    position: absolute;
+    bottom: 13%;
+    width: 99.8%;
+}
+
+/* start footer */
+.txt1{
+    text-indent: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    color: #ffffff;
+}
+
+.txt2{
+    text-indent: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    color: #ffffff;
+}
+.txt3{
+    text-indent: 60px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    color: #ffffff;
+}
+.txt4{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    color: #ffffff;
+}
+.txt5{
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    color: #ffffff;
+}
+.txt6{
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    color: #ffffff;
+}
+
+.psft1{
+    position: absolute;
+    bottom: 15px;
+    left: 7px;
+}
+.psft2{
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+}
+/* end footer */
+/* start icon */
+.psfb{
+    position: absolute;
+    bottom: 6%;
+    left: 45%;
+}
+/* end icon */
+.pscp{
+    color: #ffffff;
+    position: absolute;
+    bottom: 5px;
+    left: 45%;
 }
