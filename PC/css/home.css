@@ -128,7 +128,7 @@ body {
     padding: 11.5px 30px;
     border: 1px solid #000000;
     background-color: #f5d404;
-    color: #ffffff;
+    color: #000000;
     border-radius: 0 7px 7px 0;
 }
 
@@ -251,6 +251,27 @@ body {
     top: 33%;
 }
 
+.user a {
+    position: absolute;
+    text-decoration: none;
+    top: 36%;
+    right: 2.5%;
+}
+
+.user a {
+    color: #ffffff;
+}
+
+.user a {
+    border: 1px solid #ffffff;
+    padding: 11.5px 30px;
+    border-radius: 10px;
+}
+
+.user a:hover {
+    background-color: #474545;
+}
+
 
 /* end body */
 
@@ -267,6 +288,13 @@ body {
 
 .sec button:hover {
     color: #bab5b5;
+}
+
+.telegram a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
 }
 
 /* start footer */

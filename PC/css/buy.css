@@ -1,0 +1,48 @@
+.box {
+    position: absolute;
+    border: 1px solid #7a7a7a;
+    border-radius: 20px;
+    background-color: #232323;
+    padding: 100px 100px;
+}
+
+.box {
+    top: 20%;
+    left: 40%;
+}
+
+.box div {
+    text-align: center;
+}
+
+.box label {
+
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.box input {
+    text-align: center;
+    padding: 7px 80px;
+    border-radius: 10px;
+}
+
+.address textarea {
+    padding: 40px 80px;
+    border-radius: 10px;
+
+}
+
+.butt {
+    text-align: center;
+}
+
+.butt button {
+    padding: 5px 60px;
+    border-radius: 10px;
+}
+
+.butt button {
+    background-color: #f5d404;
+
+}

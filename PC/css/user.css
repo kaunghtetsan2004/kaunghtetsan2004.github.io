@@ -1,0 +1,71 @@
+.login h3 {
+    text-align: center;
+    color: #000000;
+    font-size: 30px;
+}
+
+.login {
+    position: absolute;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 100px 50px;
+}
+
+.login {
+    top: 20%;
+    right: 10%;
+}
+
+.login label {
+    color: #000000;
+}
+
+.login input {
+    border-radius: 20px;
+    padding: 10px 80px;
+}
+
+.login a {
+    text-decoration: none;
+}
+
+.fgpw {
+    text-align: center;
+}
+
+.fgpw a {
+    color: #000000;
+
+}
+
+.butt {
+    text-align: center;
+}
+
+.butt button {
+    text-decoration: none;
+    outline: none;
+    border: 1px solid #f5d404;
+    padding: 5px 50px;
+    border-radius: 20px;
+}
+
+.butt button {
+    color: #ffffff;
+    background-color: #f5d404;
+}
+
+.butt button:hover {
+    background-color: #000000;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close a {
+    color: #000000;
+}
