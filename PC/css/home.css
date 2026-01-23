@@ -297,6 +297,10 @@ body {
     color: #ffffff;
 }
 
+.telegram a:hover {
+    color: #bab5b5;
+}
+
 /* start footer */
 
 .bgfooter {
