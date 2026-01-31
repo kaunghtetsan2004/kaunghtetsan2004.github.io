@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Candy Crush JS</title>
+    <style>
+        body {
+            background: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(8, 70px);
+            gap: 2px;
+            background: #111;
+            padding: 10px;
+        }
+
+        .grid img {
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid"></div>
+
+    <script>
+        const grid = document.querySelector(".grid")
+        const width = 8
+        const squares = []
+        const candyColors = [
+            "https://i.imgur.com/1Xq9BiK.png",
+            "https://i.imgur.com/Tq9nK9U.png",
+            "https://i.imgur.com/7KqZz6H.png",
+            "https://i.imgur.com/X7vZQZP.png",
+            "https://i.imgur.com/5bVj0Zr.png",
+            "https://i.imgur.com/fnXJ7cM.png"
+        ]
+
+        let colorDragged
+        let colorReplaced
+        let squareIdDragged
+        let squareIdReplaced
+
+        // Create board
+        function createBoard() {
+            for (let i = 0; i < width * width; i++) {
+                const square = document.createElement("img")
+                const randomColor = candyColors[Math.floor(Math.random() * candyColors.length)]
+                square.setAttribute("src", randomColor)
+                square.setAttribute("draggable", true)
+                square.setAttribute("id", i)
+                grid.appendChild(square)
+                squares.push(square)
+
+                square.addEventListener("dragstart", dragStart)
+                square.addEventListener("dragend", dragEnd)
+                square.addEventListener("dragover", e => e.preventDefault())
+                square.addEventListener("drop", dragDrop)
+            }
+        }
+        createBoard()
+
+        function dragStart() {
+            colorDragged = this.src
+            squareIdDragged = parseInt(this.id)
+        }
+
+        function dragDrop() {
+            colorReplaced = this.src
+            squareIdReplaced = parseInt(this.id)
+            this.src = colorDragged
+            squares[squareIdDragged].src = colorReplaced
+        }
+
+        function dragEnd() {
+            const validMoves = [
+                squareIdDragged - 1,
+                squareIdDragged + 1,
+                squareIdDragged - width,
+                squareIdDragged + width
+            ]
+
+            if (!validMoves.includes(squareIdReplaced)) {
+                squares[squareIdDragged].src = colorDragged
+                squares[squareIdReplaced].src = colorReplaced
+            }
+        }
+
+        function checkRowForThree() {
+            for (let i = 0; i < 61; i++) {
+                const rowOfThree = [i, i + 1, i + 2]
+                const decidedColor = squares[i].src
+                const isBlank = decidedColor === ""
+
+                if (i % width > 5) continue
+
+                if (
+                    rowOfThree.every(
+                        index => squares[index].src === decidedColor && !isBlank
+                    )
+                ) {
+                    rowOfThree.forEach(index => squares[index].src = "")
+                }
+            }
+        }
+
+        function checkColumnForThree() {
+            for (let i = 0; i < 47; i++) {
+                const columnOfThree = [i, i + width, i + width * 2]
+                const decidedColor = squares[i].src
+                const isBlank = decidedColor === ""
+
+                if (
+                    columnOfThree.every(
+                        index => squares[index].src === decidedColor && !isBlank
+                    )
+                ) {
+                    columnOfThree.forEach(index => squares[index].src = "")
+                }
+            }
+        }
+
+        function moveDown() {
+            for (let i = 0; i < 56; i++) {
+                if (squares[i + width].src === "") {
+                    squares[i + width].src = squares[i].src
+                    squares[i].src = ""
+                }
+            }
+
+            for (let i = 0; i < width; i++) {
+                if (squares[i].src === "") {
+                    const randomColor = candyColors[Math.floor(Math.random() * candyColors.length)]
+                    squares[i].src = randomColor
+                }
+            }
+        }
+
+        setInterval(() => {
+            checkRowForThree()
+            checkColumnForThree()
+            moveDown()
+        }, 100)
+    </script>
+
+</body>
+
+</html>
