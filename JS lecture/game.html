@@ -1,157 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Candy Crush JS</title>
+    <title>Temple Run Easy to Hard</title>
     <style>
         body {
+            margin: 0;
+            background: black;
+            color: white;
+            text-align: center;
+            font-family: Arial;
+        }
+
+        canvas {
             background: #222;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(8, 70px);
-            gap: 2px;
-            background: #111;
-            padding: 10px;
-        }
-
-        .grid img {
-            width: 70px;
-            height: 70px;
-            cursor: pointer;
-            user-select: none;
+            display: block;
+            margin: auto;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="grid"></div>
+    <h2>Press SPACE to Jump</h2>
+    <canvas id="game" width="800" height="400"></canvas>
 
     <script>
-        const grid = document.querySelector(".grid")
-        const width = 8
-        const squares = []
-        const candyColors = [
-            "https://i.imgur.com/1Xq9BiK.png",
-            "https://i.imgur.com/Tq9nK9U.png",
-            "https://i.imgur.com/7KqZz6H.png",
-            "https://i.imgur.com/X7vZQZP.png",
-            "https://i.imgur.com/5bVj0Zr.png",
-            "https://i.imgur.com/fnXJ7cM.png"
-        ]
+        const canvas = document.getElementById("game");
+        const ctx = canvas.getContext("2d");
 
-        let colorDragged
-        let colorReplaced
-        let squareIdDragged
-        let squareIdReplaced
+        // PLAYER (very simple)
+        let player = {
+            x: 100,
+            y: 300,
+            size: 40,
+            velocityY: 0,
+            gravity: 0.7,
+            jump: -14,
+            onGround: true
+        };
 
-        // Create board
-        function createBoard() {
-            for (let i = 0; i < width * width; i++) {
-                const square = document.createElement("img")
-                const randomColor = candyColors[Math.floor(Math.random() * candyColors.length)]
-                square.setAttribute("src", randomColor)
-                square.setAttribute("draggable", true)
-                square.setAttribute("id", i)
-                grid.appendChild(square)
-                squares.push(square)
+        // GAME VARIABLES
+        let obstacles = [];
+        let speed = 3;          // START VERY SLOW
+        let frame = 0;
+        let score = 0;
+        let gameOver = false;
 
-                square.addEventListener("dragstart", dragStart)
-                square.addEventListener("dragend", dragEnd)
-                square.addEventListener("dragover", e => e.preventDefault())
-                square.addEventListener("drop", dragDrop)
+        // JUMP
+        document.addEventListener("keydown", e => {
+            if (e.code === "Space" && player.onGround) {
+                player.velocityY = player.jump;
+                player.onGround = false;
             }
-        }
-        createBoard()
+        });
 
-        function dragStart() {
-            colorDragged = this.src
-            squareIdDragged = parseInt(this.id)
-        }
-
-        function dragDrop() {
-            colorReplaced = this.src
-            squareIdReplaced = parseInt(this.id)
-            this.src = colorDragged
-            squares[squareIdDragged].src = colorReplaced
+        function createObstacle() {
+            obstacles.push({
+                x: canvas.width,
+                y: 300,
+                width: 30,
+                height: 40
+            });
         }
 
-        function dragEnd() {
-            const validMoves = [
-                squareIdDragged - 1,
-                squareIdDragged + 1,
-                squareIdDragged - width,
-                squareIdDragged + width
-            ]
-
-            if (!validMoves.includes(squareIdReplaced)) {
-                squares[squareIdDragged].src = colorDragged
-                squares[squareIdReplaced].src = colorReplaced
+        function update() {
+            if (gameOver) {
+                ctx.fillStyle = "white";
+                ctx.font = "40px Arial";
+                ctx.fillText("GAME OVER", 260, 200);
+                return;
             }
-        }
 
-        function checkRowForThree() {
-            for (let i = 0; i < 61; i++) {
-                const rowOfThree = [i, i + 1, i + 2]
-                const decidedColor = squares[i].src
-                const isBlank = decidedColor === ""
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-                if (i % width > 5) continue
+            // PLAYER PHYSICS
+            player.velocityY += player.gravity;
+            player.y += player.velocityY;
 
+            if (player.y >= 300) {
+                player.y = 300;
+                player.velocityY = 0;
+                player.onGround = true;
+            }
+
+            // DRAW PLAYER
+            ctx.fillStyle = "yellow";
+            ctx.fillRect(player.x, player.y, player.size, player.size);
+
+            // CREATE OBSTACLES (slow → fast)
+            if (frame % Math.floor(120 - speed * 5) === 0) {
+                createObstacle();
+            }
+
+            // MOVE OBSTACLES
+            obstacles.forEach((obs, i) => {
+                obs.x -= speed;
+
+                ctx.fillStyle = "red";
+                ctx.fillRect(obs.x, obs.y, obs.width, obs.height);
+
+                // COLLISION
                 if (
-                    rowOfThree.every(
-                        index => squares[index].src === decidedColor && !isBlank
-                    )
+                    player.x < obs.x + obs.width &&
+                    player.x + player.size > obs.x &&
+                    player.y < obs.y + obs.height &&
+                    player.y + player.size > obs.y
                 ) {
-                    rowOfThree.forEach(index => squares[index].src = "")
+                    gameOver = true;
                 }
+
+                // REMOVE OBSTACLE
+                if (obs.x + obs.width < 0) {
+                    obstacles.splice(i, 1);
+                    score++;
+                }
+            });
+
+            // GROUND
+            ctx.fillStyle = "#555";
+            ctx.fillRect(0, 340, canvas.width, 60);
+
+            // SPEED INCREASE (KEY PART 🔥)
+            if (frame % 300 === 0) {
+                speed += 0.5;   // game becomes faster
             }
+
+            // SCORE
+            ctx.fillStyle = "white";
+            ctx.font = "20px Arial";
+            ctx.fillText("Score: " + score, 20, 30);
+            ctx.fillText("Speed: " + speed.toFixed(1), 20, 55);
+
+            frame++;
+            requestAnimationFrame(update);
         }
 
-        function checkColumnForThree() {
-            for (let i = 0; i < 47; i++) {
-                const columnOfThree = [i, i + width, i + width * 2]
-                const decidedColor = squares[i].src
-                const isBlank = decidedColor === ""
-
-                if (
-                    columnOfThree.every(
-                        index => squares[index].src === decidedColor && !isBlank
-                    )
-                ) {
-                    columnOfThree.forEach(index => squares[index].src = "")
-                }
-            }
-        }
-
-        function moveDown() {
-            for (let i = 0; i < 56; i++) {
-                if (squares[i + width].src === "") {
-                    squares[i + width].src = squares[i].src
-                    squares[i].src = ""
-                }
-            }
-
-            for (let i = 0; i < width; i++) {
-                if (squares[i].src === "") {
-                    const randomColor = candyColors[Math.floor(Math.random() * candyColors.length)]
-                    squares[i].src = randomColor
-                }
-            }
-        }
-
-        setInterval(() => {
-            checkRowForThree()
-            checkColumnForThree()
-            moveDown()
-        }, 100)
+        update();
     </script>
 
 </body>
