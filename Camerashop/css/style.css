@@ -1,0 +1,65 @@
+/* font-family */
+@import url('../css/font.css');
+
+:root {
+
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin: 'Josefin', cursive;
+    --Lexned: 'Lexend', cursive;
+    --Livvic: 'Livvic', cursive;
+}
+
+/* ....navbar .......... */
+
+/* shopname */
+
+/* .shopname {
+    position: absolute;
+    left: 8%;
+    top: 25%;
+} */
+
+.title {
+    color: #ff0000;
+    font-family: var(--Anton);
+    font-size: 1.2rem;
+}
+
+.tagline {
+    font-family: var(--Livvic);
+    font-size: 0.8rem;
+}
+
+/* shopname */
+
+/* search box */
+
+.search_box input {
+    padding: 10px 50px;
+    font-family: var(--Anton);
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 7px 0 0 7px;
+
+}
+
+.search_box button {
+    padding: 10px 30px;
+    border: 1px solid #000000;
+    border-radius: 0 7px 7px 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: var(--Anton);
+}
+
+.search_box button:hover{
+    background-color: #ff0000;
+    color: #000000;
+}
+
+/* search box */
+
+
+
+/* ....navbar .......... */
