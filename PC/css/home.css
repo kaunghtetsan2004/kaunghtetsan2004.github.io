@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: #474545;
+    width: 100%;
+}
+
+
+/* start nav word */
+.navbg {
+    position: absolute;
+    position: fixed;
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    width: 99.8%;
+    height: 110px;
+}
+
+
+.navword {
+    color: #ffffff;
+    font-size: 80px;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.navword {
+    margin-top: 120px;
+}
+
+.logo {
+    position: relative;
+    position: fixed;
+}
+
+.logo img {
+    position: absolute;
+    width: 60px;
+    top: 25px;
+    left: 30px;
+}
+
+.name {
+
+    position: absolute;
+    color: #ffffff;
+    top: 40px;
+    left: 5%;
+    font-family: 'a';
+}
+
+.name h2 {
+    position: fixed;
+}
+
+.nav {
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    position: fixed;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+
+.nav button,
+.sec button {
+    color: #ffffff;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    padding: 10px;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.nav button {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+}
+
+@font-face {
+    src: url('../Gravitas_One/GravitasOne-Regular.ttf');
+    font-family: 'a';
+}
+
+.nav div,
+.sec div {
+    display: inline-block;
+}
+
+.nav button:hover {
+    transform: translateY(-3px);
+    transition-duration: 10ms;
+    color: #eeeded;
+}
+
+
+.bunner {
+    position: relative;
+}
+
+.bunner {
+    position: absolute;
+    top: 36%;
+    left: 38%;
+}
+
+
+.bunner input {
+    padding: 11.5px 110px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 7px 0 0 7px;
+
+}
+
+.bunner button {
+    padding: 11.5px 30px;
+    border: 1px solid #000000;
+    background-color: #f5d404;
+    color: #000000;
+    border-radius: 0 7px 7px 0;
+}
+
+.buy {
+    color: #ffffff;
+    position: absolute;
+    top: 36.4%;
+    right: 34%;
+}
+
+/* end nav  */
+
+
+/* start body */
+.promotion img {
+    position: absolute;
+    left: 26%;
+    width: 45%;
+}
+
+.txtser {
+    position: absolute;
+    bottom: 40%;
+    left: 40%;
+}
+
+.txtser input {
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #000000;
+}
+
+.b1 {
+    color: #ffffff;
+    display: inline-block;
+}
+
+.b1 h2 {
+    position: absolute;
+    top: 47%;
+    left: 42%;
+    font-size: 40px;
+}
+
+.life {
+    border: 1px solid #1f1f20;
+    background-color: #1f1f20;
+    border-radius: 8px;
+    text-align: center;
+    width: 320px;
+    height: 80px;
+}
+
+.life {
+    position: absolute;
+    left: 18%;
+    bottom: 33%;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.lifeps {
+    position: relative;
+    top: 15px;
+}
+
+.fast {
+    border: 1px solid #1f1f20;
+    background-color: #1f1f20;
+    border-radius: 8px;
+    text-align: center;
+    width: 320px;
+    height: 80px;
+}
+
+.fast {
+    position: absolute;
+    left: 41%;
+    bottom: 33%;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.fastps {
+    position: relative;
+    top: 15px;
+}
+
+.best {
+    border: 1px solid #1f1f20;
+    background-color: #1f1f20;
+    border-radius: 8px;
+    text-align: center;
+    width: 320px;
+    height: 80px;
+}
+
+.best {
+    position: absolute;
+    right: 20%;
+    bottom: 33%;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.bestps {
+    position: relative;
+    top: 15px;
+}
+
+/* .bgcolor {
+    position: relative;
+} */
+
+.bgcolor {
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: 400px;
+    top: 33%;
+}
+
+.user a {
+    position: absolute;
+    text-decoration: none;
+    top: 36%;
+    right: 2.5%;
+}
+
+.user a {
+    color: #ffffff;
+}
+
+.user a {
+    border: 1px solid #ffffff;
+    padding: 11.5px 30px;
+    border-radius: 10px;
+}
+
+.user a:hover {
+    background-color: #474545;
+}
+
+
+/* end body */
+
+.sec button {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sec {
+    position: absolute;
+    bottom: 13%;
+    right: 5px;
+}
+
+.sec button:hover {
+    color: #bab5b5;
+}
+
+.telegram a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+}
+
+.telegram a:hover {
+    color: #bab5b5;
+}
+
+/* start footer */
+
+.bgfooter {
+    background-color: #000000;
+    width: 100%;
+    height: 121px;
+    position: absolute;
+    bottom: 0px;
+
+}
+
+.txt1 {
+    text-indent: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+.txt2 {
+    text-indent: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+.txt3 {
+    text-indent: 60px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+.slogan {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.slogan {
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+}
+
+.icon {
+    color: #ffffff;
+}
+
+.icon:hover {
+    transform: translateY(-8px);
+    transition-duration: 20ms;
+}
+
+
+.ps div {
+    position: absolute;
+    bottom: 5.5%;
+    left: 45%;
+}
+
+.icon a {
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+/* .icon:hover {
+    transform: translateY(-8px);
+} */
+
+
+.location {
+    color: #ffffff;
+    font-size: 17px;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+.location {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+}
+
+
+.hr3 {
+    position: absolute;
+    bottom: 11.4%;
+    width: 99.8%;
+}
+
+.bg {
+    border: #000000;
+    background: none #000000;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.copy {
+    position: absolute;
+    bottom: 1px;
+    left: 45%;
+    color: #ffffff;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let secrectNo = 8;
+        let guessNo = Number(prompt('Enter a Number between 1 to 20!'));
+        tries = 1;
+
+        while (secrectNo !== guessNo) {
+            if (guessNo < secrectNo) {
+                alert('Your number is lower, Please Try Again!');
+            } else {
+                alert('Your number is higher, Please Try Again!');
+            }
+            guessNo = Number(prompt("Enter a Number between 1 to 20!"));
+            tries++;
+
+        }
+
+        document.write('Wow! Your Number is Correct.')
+        document.write('You tried' + ' ' + tries + ' ' + 'times')
+
+
+    </script>
+
+</body>
+
+</html>

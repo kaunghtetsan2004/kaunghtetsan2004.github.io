@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Georgia", serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+/* Section */
+.destination {
+    text-align: center;
+    padding: 60px 40px;
+}
+
+.destination h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.destination p {
+    margin-top: 8px;
+    color: #555;
+    font-size: 15px;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 320px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 18px 0;
+    font-size: 18px;
+    font-weight: bold;
+}

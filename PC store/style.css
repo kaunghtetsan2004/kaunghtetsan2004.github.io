@@ -1,26 +1,27 @@
-body{
-background-image:  url(images/background.jpg);
+body {
+    background-image: url(images/background.jpg);
 
-    
+
 }
-h1{
+
+h1 {
     color: #ffffff;
     font-size: 170px;
     text-align: center;
-    font-family:Georgia,'a';
+    font-family: Georgia, 'a';
     text-transform: uppercase;
     font-weight: 900;
     opacity: 0.7;
     letter-spacing: 0.05rem;
 
 }
- 
-@font-face{
-  src: url('Gravitas_One/GravitasOne-Regular.ttf');
-  font-family: 'a';
- }
 
-button{
+@font-face {
+    src: url('Gravitas_One/GravitasOne-Regular.ttf');
+    font-family: 'a';
+}
+
+button {
     text-decoration: none;
     color: #ffffff;
     font-size: 20px;
@@ -33,12 +34,12 @@ button{
     border: none;
     outline: none;
     box-shadow: none;
-    background-color:transparent;
+    background-color: transparent;
 }
 
 
 
-h2{
+h2 {
     color: #ffffff;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
@@ -49,7 +50,7 @@ h2{
 
 }
 
-h3{
+h3 {
     color: #ffffff;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
@@ -59,7 +60,8 @@ h3{
     margin: auto;
 
 }
-h4{
+
+h4 {
     color: #ffffff;
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
@@ -71,32 +73,33 @@ h4{
 
 }
 
-p{
-   color: #ffffff;
+p {
+    color: #ffffff;
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     /* text-align: left; */
     letter-spacing: 1px;
-    margin: auto; 
+    margin: auto;
     line-height: 1.7;
 }
 
-.about{
-   position: absolute;
-   right: 20px;
-   bottom:1;
-   text-size-adjust: 10%;
+.about {
+    position: absolute;
+    right: 20px;
+    bottom: 1;
+    text-size-adjust: 10%;
 
 }
 
-a{
+a {
     text-decoration: none;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin: auto;
 }
-.table1{
+
+.table1 {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -104,85 +107,94 @@ a{
     height: 100px;
     margin: auto;
 }
-.table2{
+
+.table2 {
     position: fixed;
     bottom: 1;
-    right:0 ;
+    right: 0;
     width: 100%;
     height: 100px;
     margin: auto;
 }
 
-.txt1{
+.txt1 {
     text-indent: 0px;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1.7;
 }
 
-.txt2{
+.txt2 {
     text-indent: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1.7;
 }
-.txt3{
+
+.txt3 {
     text-indent: 60px;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1.7;
 }
 
-.footer{
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;  
+    padding: 20px;
 }
+
 .footer-left,
 .footer-center,
-.footer-right{
+.footer-right {
     flex: 1;
 }
 
 /* alignment */
-.footer-left{
-    text-align: left ;
+.footer-left {
+    text-align: left;
 }
-.footer-center{
+
+.footer-center {
     text-align: center;
 }
-.footer-right{
+
+.footer-right {
     text-align: right;
 }
+
 /* icon spacing */
-.footer-center a{
+.footer-center a {
     margin: 0 8px;
     color: #ffffff;
     text-decoration: none;
 }
 
-button:hover{
+button:hover {
     color: #515a51;
 }
 
-.ps1{
+.ps1 {
     position: absolute;
     bottom: 5px;
     left: 5px;
 }
-.ps2{
+
+.ps2 {
     position: absolute;
     bottom: 6px;
     left: 45%;
-    
+
 }
-.ps3{
+
+.ps3 {
     position: absolute;
     bottom: 5px;
     right: 5px;
 }
-.ps4{
+
+.ps4 {
     position: absolute;
     left: 50%;
     bottom: 1px;
