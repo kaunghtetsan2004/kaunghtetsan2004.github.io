@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Temple Run Easy to Hard</title>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            color: white;
+            text-align: center;
+            font-family: Arial;
+        }
+
+        canvas {
+            background: #222;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Press SPACE to Jump</h2>
+    <canvas id="game" width="800" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById("game");
+        const ctx = canvas.getContext("2d");
+
+        // PLAYER (very simple)
+        let player = {
+            x: 100,
+            y: 300,
+            size: 40,
+            velocityY: 0,
+            gravity: 0.7,
+            jump: -14,
+            onGround: true
+        };
+
+        // GAME VARIABLES
+        let obstacles = [];
+        let speed = 3;          // START VERY SLOW
+        let frame = 0;
+        let score = 0;
+        let gameOver = false;
+
+        // JUMP
+        document.addEventListener("keydown", e => {
+            if (e.code === "Space" && player.onGround) {
+                player.velocityY = player.jump;
+                player.onGround = false;
+            }
+        });
+
+        function createObstacle() {
+            obstacles.push({
+                x: canvas.width,
+                y: 300,
+                width: 30,
+                height: 40
+            });
+        }
+
+        function update() {
+            if (gameOver) {
+                ctx.fillStyle = "white";
+                ctx.font = "40px Arial";
+                ctx.fillText("GAME OVER", 260, 200);
+                return;
+            }
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // PLAYER PHYSICS
+            player.velocityY += player.gravity;
+            player.y += player.velocityY;
+
+            if (player.y >= 300) {
+                player.y = 300;
+                player.velocityY = 0;
+                player.onGround = true;
+            }
+
+            // DRAW PLAYER
+            ctx.fillStyle = "yellow";
+            ctx.fillRect(player.x, player.y, player.size, player.size);
+
+            // CREATE OBSTACLES (slow → fast)
+            if (frame % Math.floor(120 - speed * 5) === 0) {
+                createObstacle();
+            }
+
+            // MOVE OBSTACLES
+            obstacles.forEach((obs, i) => {
+                obs.x -= speed;
+
+                ctx.fillStyle = "red";
+                ctx.fillRect(obs.x, obs.y, obs.width, obs.height);
+
+                // COLLISION
+                if (
+                    player.x < obs.x + obs.width &&
+                    player.x + player.size > obs.x &&
+                    player.y < obs.y + obs.height &&
+                    player.y + player.size > obs.y
+                ) {
+                    gameOver = true;
+                }
+
+                // REMOVE OBSTACLE
+                if (obs.x + obs.width < 0) {
+                    obstacles.splice(i, 1);
+                    score++;
+                }
+            });
+
+            // GROUND
+            ctx.fillStyle = "#555";
+            ctx.fillRect(0, 340, canvas.width, 60);
+
+            // SPEED INCREASE (KEY PART 🔥)
+            if (frame % 300 === 0) {
+                speed += 0.5;   // game becomes faster
+            }
+
+            // SCORE
+            ctx.fillStyle = "white";
+            ctx.font = "20px Arial";
+            ctx.fillText("Score: " + score, 20, 30);
+            ctx.fillText("Speed: " + speed.toFixed(1), 20, 55);
+
+            frame++;
+            requestAnimationFrame(update);
+        }
+
+        update();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+@import url(../css/fonts.css);
+
+
+:root {
+  /* theme font-family */
+  --Abel: 'Abel', cursive;
+  --Anton: 'Anton', cursive;
+  --Josefin: 'Josefin', cursive;
+  --Lexned: 'Lexend', cursive;
+  --Livvic: 'Livvic', cursive;
+  --Roboto: 'Roboto', cursive;
+}
+
+* {
+  font-family: var(--Roboto);
+}
+
+/* ........logo icon........ */
+
+.logo_icon {
+  width: 150px;
+}
+
+
+
+/* ....x....logo icon....x.... */
+
+
+/* ........Sec Nev Bar........ */
+
+
+
+
+/* ....x....Sec Nev Bar...x..... */
+
+/* ..........Bottom Nav Bar.......... */
+
+.navbar-toggler:link,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+.card_noti{
+  position: relative;
+  top: -15px;
+  left: -11px;
+}
+
+.card_noti:hover{
+  color: #ffffff !important;
+}
+
+.nav_hover:hover{
+  color: #ffffff !important;
+}
+
+
+/*..............Dopdown .............. */
+
+.dropdown-item a:hover {
+  background-color: red !important;
+
+}
+
+.navbar-nav a:hover {
+ color: #ff0000 !important;
+}
+
+.navbar-nav a:active{
+  background-color: transparent !important;
+}
+/*.......x.......Dopdown .......x....... */
+
+
+/* ....x......Bottom Nav Bar.....x..... */
+
+/* ..........Bunner.......... */
+
+.carousel_image {
+  height: 63vh;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+/* .....x.....Bunner....x...... */
+
+/* ............Discount............ */
+
+.title_underline {
+  width: 100px;
+  height: 3px;
+  background-color: #dc3545;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  overflow: hidden;
+}
+
+.category-card {
+  overflow: hidden;
+}
+
+.category-card img {
+  filter: blur(60%);
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+
+/* ......x......Discount......x...... */
+
+/* .........Future Products......... */
+
+.ft_img {
+  width: 50%;
+  height: 50%;
+
+}
+
+.product-img {
+  height: 270px;
+  /* Control image height */
+  object-fit: contain;
+  /* Prevent distortion */
+  padding: 20px;
+  /* Add breathing space */
+}
+
+
+/* .....x....Future Products....x..... */
+
+/* footer */
+
+.test {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background: #000000;
+  color: #fafafa;
+  padding: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer .content .logo {
+  font-size: 40px;
+  text-align: center;
+}
+
+footer .content p {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+footer .content .sm,
+footer .content .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+footer .content .links {
+  flex-wrap: wrap;
+}
+
+footer .content .sm li {
+  margin: 15px;
+}
+
+footer .content .links li {
+  margin: 0 12px;
+  margin-bottom: 10px;
+}
+
+
+footer .content .sm li a {
+  font-size: 25px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+footer .content .sm li a:hover {
+  background: #fafafa;
+  color: #000000;
+  border-radius: 10px;
+}
+
+footer .content .links li a:hover {
+  opacity: 0.5;
+}
+
+footer .copyright {
+  text-align: center;
+  padding-top: 20px;
+  width: 100%;
+  border-top: 1px solid #555;
+}
+
+@media screen and (max-width: 500px) {
+  footer {
+    width: 100%;
+  }
+
+  footer .content .logo {
+    font-size: 30px;
+  }
+
+  footer .content p {
+    padding: 15px;
+  }
+
+  footer .content .sm li a {
+    padding: 5px;
+  }
+}

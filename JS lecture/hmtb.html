@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Form</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background: #f5f5f5;
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            margin-top: 30px;
+        }
+
+        .card {
+            width: 600px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 200px;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+
+        table {
+            margin: 30px auto;
+            border-collapse: collapse;
+            width: 600px;
+            background: white;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #333;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        tfoot td {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Restaurant Form</h1>
+
+    <div class="card">
+        <label>Food Name</label>
+        <input type="text" id="foodName">
+
+        <label>Price</label>
+        <input type="number" id="price">
+
+        <label>Quantity</label>
+        <input type="number" id="quantity">
+
+        <br>
+        <button onclick="addItem()">Register</button>
+    </div>
+
+    <h2>Menu Lists</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Food Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="menuBody">
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Grand Total</td>
+                <td id="grandTotal">0</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        let count = 0;
+        let grandTotal = 0;
+
+        function addItem() {
+            const foodName = document.getElementById("foodName").value;
+            const price = Number(document.getElementById("price").value);
+            const quantity = Number(document.getElementById("quantity").value);
+
+            if (!foodName || price <= 0 || quantity <= 0) {
+                alert("Please fill all fields correctly");
+                return;
+            }
+
+            count++;
+            const total = price * quantity;
+            grandTotal += total;
+
+            const row = `
+        <tr>
+          <td>${count}</td>
+          <td>${foodName}</td>
+          <td>${price}</td>
+          <td>${quantity}</td>
+          <td>${total}</td>
+        </tr>
+      `;
+
+            document.getElementById("menuBody").innerHTML += row;
+            document.getElementById("grandTotal").innerText = grandTotal;
+
+            // clear inputs
+            document.getElementById("foodName").value = "";
+            document.getElementById("price").value = "";
+            document.getElementById("quantity").value = "";
+        }
+    </script>
+
+</body>
+
+</html>
