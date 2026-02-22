@@ -236,3 +236,17 @@ footer .copyright {
     padding: 5px;
   }
 }
+
+/* ...........Service........... */
+
+.service_icon {
+    width: 60px;
+    height: 60px;
+}
+
+.service_card:hover {
+    transform: translateY(-12px);
+    transition-duration: .3s;
+}
+
+/* ......x.....Service.....x...... */

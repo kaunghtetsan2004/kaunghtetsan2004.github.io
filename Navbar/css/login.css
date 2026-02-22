@@ -1,9 +1,27 @@
+@import url(../css/fonts.css);
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  
 }
+
+:root {
+  /* theme font-family */
+  --Abel: 'Abel', cursive;
+  --Anton: 'Anton', cursive;
+  --Josefin: 'Josefin', cursive;
+  --Lexned: 'Lexend', cursive;
+  --Livvic: 'Livvic', cursive;
+  --Roboto: 'Roboto', cursive;
+}
+
+* {
+  font-family: var(--Roboto);
+}
+
+
 body {
   display: flex;
   justify-content: center;
@@ -198,6 +216,11 @@ form {
   border: 2px solid #ff0000;
   color: #000000;
   box-shadow: none;
+}
+
+.toggle-panel .btn:active{
+  color: #ffffff;
+  background-color: #ff0000;
 }
 
 @media screen and (max-width: 650px) {
