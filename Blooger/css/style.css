@@ -1,228 +1,268 @@
-@import url('../css/font.css');
-
-
-html,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 body {
-    margin: 0%;
-    box-sizing: border-box;
-    overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #000000, #ffffff);
+}
+.container {
+  position: relative;
+  width: 850px;
+  height: 550px;
+  background-color: #000000;
+  border-radius: 30px;
+  margin: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
-:root {
-    /*  Theme color */
-
-    --text-gray: #3f4954;
-    --text-light: #686666da;
-    --bg-color: #0f0f0f;
-    --white: #ffffff;
-    --midnight: #104f55;
-
-    /* gradient color */
-    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-
-    /* theme font-family */
-    --Abel: 'Abel', cursive;
-    --Anton: 'Anton', cursive;
-    --Josefin: 'Josefin', cursive;
-    --Lexned: 'Lexend', cursive;
-    --Livvic: 'Livvic', cursive;
+.form-box {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background: #000000;
+  right: 0;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px;
+  z-index: 1;
+  transition: 0.5s ease-in-out 1s, visibility 0s 1s;
 }
 
-/* .......Global Classes........... */
-
-a {
-    text-decoration: none;
-    color: var(--text-gray);
+.container.active .form-box {
+  right: 50%;
+}
+.form-box.register {
+  visibility: hidden;
 }
 
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.container.active .form-box.register {
+  visibility: visible;
 }
 
-ul {
-    list-style-type: none;
+form {
+  width: 100%;
 }
 
-h1 {
-    font-family: var(--Lexned);
-    font-size: 2.5rem;
+.container h1 {
+  font-size: 33px;
+  margin: -10px 0;
 }
 
-h2 {
-    font-family: var(--Lexned);
+.input-box {
+  position: relative;
+  margin: 30px 0;
 }
 
-h3 {
-    font-family: var(--Abel);
-    font-size: 1.3rem;
+.input-box input {
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 13px 50px 13px 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ff0000;
+}
+.input-box input::placeholder {
+  color: #ff0000;
+  font-weight: 400;
 }
 
-button.btn {
-    border: none;
-    border-radius: 2rem;
-    padding: 1rem 3rem;
-    font-size: 1rem;
-    font-family: var(--Livvic);
-    cursor: pointer;
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #ff0000;
 }
 
-/* .......Global Classes........... */
-
-
-/* .......navbar .......... */
-
-.nav {
-    background: #ffffff;
-    padding: 0.2rem;
-    height: 0rem;
-    min-height: 10vb;
-    overflow: hidden;
-    transition: height 1s ease-in-out;
+.forget-link {
+  margin: -15px 0 15px;
 }
 
-.nav .nav-menu {
-    justify-content: space-between;
+.forget-link a {
+  font-size: 12.5px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.nav .toggle-collapse {
-    position: absolute;
-    top: 0%;
-    width: 90%;
-    cursor: pointer;
-    display: none;
+.btn {
+  width: 100%;
+  height: 48px;
+  background-color: #ff0000;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 600;
 }
 
-.nav .toggle-collapse .toggle-icons {
-    display: flex;
-    justify-content: flex-end;
-    padding: 1.7rem 0;
+.container p {
+  font-size: 12.5px;
+  margin: 15px 0;
 }
 
-.nav .toggle-collapse .toggle-icons i {
-    font-size: 1.4rem;
-    color: var(--text-gray);
+.social-icons {
+  display: flex;
+  justify-content: center;
 }
 
-
-.collapse {
-    height: 30rem;
+.social-icons a {
+  display: inline-flex;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  font-size: 22px;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 8px;
 }
 
-.nav .nav-items {
-
-    display: flex;
-    margin: 0;
+.toggle-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
-.nav .nav-items .nav-link {
-    padding: 1.6rem 1rem;
-    font-size: 1.1rem;
-    position: relative;
-    font-family: var(--Abel);
-    font-size: 1.1rem;
-
+.toggle-box::before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  left: -250%;
+  border-radius: 100px;
+  background-color: #ffffff;
+  z-index: 2;
+  transition: 1.4s ease-in-out;
 }
 
-.nav .nav-items .nav-link:hover {
-    background-color: var(--midnight);
+.container.active .toggle-box::before {
+  left: 50%;
 }
 
-.nav .nav-items .nav-link:hover a {
-    color: var(--white);
+.toggle-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  /* background-color: #64181c; */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: 0.5s ease-in-out;
 }
 
-.nav .nav-brand a {
-    font-size: 1.6rem;
-    padding: 1rem 0;
-    display: block;
-    font-family: var(--Lexned);
-
-
+.toggle-panel.toggle-left {
+  left: 0;
+  transition-delay: 1s;
 }
 
-.nav .social {
-    padding: 1.4rem 0;
-
+.container.active .toggle-panel.toggle-left {
+  left: -50%;
+  transition-delay: 0.5s;
 }
 
-.nav .social i {
-    padding: 0.2rem;
-
+.toggle-panel.toggle-right {
+  right: -50%;
+  transition-delay: 0.5s;
 }
 
-.nav .social i:hover {
-    color: #a1c4fd;
+.container.active .toggle-panel.toggle-right {
+  right: 0;
+  transition-delay: 1s;
 }
 
-/* .......navbar .......... */
-
-/* ...........Main content........... */
-
-/* Site title */
-
-main .site-title {
-    background: url('../images/Untitled\ design.jpg');
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-
+.toggle-panel p {
+  margin-bottom: 20px;
 }
 
-main .site-title .site-background {
-    padding-top: 10rem;
-    text-align: center;
-    color: var(--white);
+.toggle-panel .btn {
+  width: 160px;
+  height: 46px;
+  background: transparent;
+  border: 2px solid #000000;
+  color: #ff0000;
+  box-shadow: none;
 }
 
-main .site-title h1,
-h3 {
-    margin: .3rem;
-}
-
-main .site-title .btn {
-    margin: 1.8rem;
-    background: var(--sky);
-}
-
-main .site-title .btn:hover {
-    background: transparent;
-    border: 1px solid var(--white);
-    color: var(--white);
-}
-
-/* Site title */
-
-/* Blog-Carousel */
-
-main .blog {
-    background: url('../images/bggra.jpg');
-    background-repeat: no-repeat;
-    background-position: right;
-    height: 100vh;
+@media screen and (max-width: 650px) {
+  .container {
+    height: calc(100vh - 40px);
+  }
+  .form-box {
+    /* background-color: purple; */
     width: 100%;
+    height: 70%;
+    bottom: 0;
+  }
+  .container.active .form-box {
+    right: 0;
+    bottom: 30%;
+  }
+  .toggle-box::before {
+    left: 0;
+    top: -270%;
+    width: 100%;
+    height: 300%;
+    border-radius: 20vw;
+  }
+  .container.active .toggle-box::before {
+    left: 0;
+    top: 70%;
+  }
+  .toggle-panel {
+    width: 100%;
+    height: 30%;
+  }
+  .toggle-panel.toggle-left {
+    top: 0;
+  }
+  .container.active .toggle-panel.toggle-left {
+    left: 0;
+    top: -30%;
+  }
+  .toggle-panel.toggle-right {
+    right: 0;
+    bottom: -30%;
+  }
+  .container.active .toggle-panel.toggle-right {
+    bottom: 0;
+  }
 }
 
-/* Blog-Carousel */
-
-
-
-/* ...........Main content........... */
-
-/* Viewport less than equal to 750px */
-
-@media only screen and (max-width:750px) {
-
-    .nav .nav-menu,
-    .nav .nav-items {
-        flex-direction: column;
-    }
-
-    .nav .toggle-collapse {
-        display: initial;
-    }
+@media screen and (max-width: 400px) {
+  .form-box {
+    padding: 20px;
+  }
+  .toggle-panel h1 {
+    font-size: 30px;
+  }
 }
 
-/* Viewport less than equal to 750px */
+.logo_img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.text_color{
+    color: #ff0000 !important;
+}
+
+.text_color1{
+    color: #000000 !important;
+}
