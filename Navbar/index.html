@@ -19,6 +19,10 @@
 
     <link rel="stylesheet" href="css/custom.css">
 
+    <!-- .............hovercss............. -->
+
+    <link rel="stylesheet" href="css/hover.css">
+
     <!-- ..........bootstrap.......... -->
 
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -69,20 +73,17 @@
 
     <nav class="navbar bg-body-tertiary">
         <div class="container">
-            <a class="navbar-brand">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo/logoblack.png" alt="" class="logo_icon">
             </a>
-            <!-- <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Enter product name" aria-label="Search" />
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> -->
+
             <div class="">
                 <a href="login.html" class="text-decoration-none text-black rounded-pill btn btn-outline-danger">
                     <i class="fa-regular fa-user"></i>
                     LOGIN
                 </a>
 
-                <a href="" class="text-decoration-none text-black rounded-pill btn btn-outline-danger">
+                <a href="https://www.viber.com/en/" class="text-decoration-none text-black rounded-pill btn btn-outline-danger">
                     <i class="fa-solid fa-headset"></i>
                     SERVICE
                 </a>
@@ -94,65 +95,63 @@
 
     <!-- ...........bottom nav bar........... -->
 
-    <nav class="navbar navbar-expand-lg  bg-dark shadow">
+    <nav class="navbar navbar-expand-lg bg-dark shadow">
         <div class="container">
-
             <button class="navbar-toggler navbar-dark tg_icon" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon tg_icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                <!-- Left Menu -->
                 <ul class="navbar-nav">
                     <li class="nav-item ms-3 ms-lg-4">
-                        <a class="nav-link nav_hover active  text-white" aria-current="page" href="index.html">HOME</a>
+                        <a class="nav-link text-white active" href="index.html">HOME</a>
                     </li>
+
                     <li class="nav-item dropdown ms-3 ms-lg-4">
-                        <a class="nav-link nav_hover dropdown-toggle text-white " href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">
                             CATOGARIES
                         </a>
-                        <ul class="dropdown-menu ">
+                        <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="camera.html">CAMERA & LEN</a></li>
-                            <li><a class="dropdown-item" href="#">BAG & CASE</a></li>
-                            <li><a class="dropdown-item" href="#">LIGHTING</a></li>
-                            <li><a class="dropdown-item" href="#">AUDIO</a></li>
+                            <li><a class="dropdown-item" href="backpack.html">BAG & CASE</a></li>
+                            <li><a class="dropdown-item" href="lighting.html">LIGHTING</a></li>
+                            <li><a class="dropdown-item" href="audio.html">AUDIO</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item ms-3 ms-lg-4">
-                        <a class="nav-link nav_hover  text-white" href="#">ACCESSORIES</a>
+                        <a class="nav-link text-white" href="accessories.html">ACCESSORIES</a>
                     </li>
-                    <li class="nav-item ms-3 ms-lg-4">
-                        <a class="nav-link nav_hover  text-white" href="#">PHOTOGRAPHY & ACTION</a>
-                    </li>
-                    <li class="nav-item ms-3 ms-lg-4">
-                        <a class="nav-link nav_hover text-white " href="#">ABOUT</a>
-                    </li>
-                    <li class="nav-item ms-3 ms-lg-4">
-                        <a class="nav-link nav_hover  text-white" href="#">CONTACT</a>
-                    </li>
-
-
 
                     <li class="nav-item ms-3 ms-lg-4">
-                        <a class="nav-link nav_hover text-white" href="#">
-                            <i class="fa-solid fa-heart fa-xl"></i>
-                            <span
-                                class=" rounded-circle bg-danger px-1 card_noti">0</span>
-                        </a>
+                        <a class="nav-link text-white" href="about.html">ABOUT</a>
                     </li>
 
-                    <li class="nav-item ms-3 ms-lg-4  ">
-                        <a class="nav-link nav_hover text-white " href="#">
-                            <i class="fa-solid fa-cart-shopping fa-xl"></i>
-                            <span
-                                class=" rounded-circle bg-danger px-1 card_noti">0</span>
-                        </a>
+                    <li class="nav-item ms-3 ms-lg-4">
+                        <a class="nav-link text-white" href="contact.html">CONTACT</a>
                     </li>
-
-
                 </ul>
+
+                <!-- Right Icons -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item ms-3">
+                        <a class="nav-link text-white" href="fav.html">
+                            <i class="fa-solid fa-heart fa-xl"></i>
+                            <span class="rounded-circle bg-danger px-1 card_noti">0</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-3">
+                        <a class="nav-link text-white" href="cart.html">
+                            <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                            <span class="rounded-circle bg-danger px-1 card_noti">0</span>
+                        </a>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </nav>
@@ -165,7 +164,7 @@
     <div id="carouselExampleCaptions" class="carousel slide">
 
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active ">
                 <img src="images/Bunner/bunner2 (1).jpg" class="d-block w-100 carousel_image" alt="...">
                 <div class="carousel-caption translate-middle-y">
                     <h5 class="text-start mb-3">Welcome to The Mirror</h5>
@@ -173,21 +172,21 @@
                     <p class="text-start mb-4">Premium Cameras & Accessories at the Best Prices</p>
 
                     <div class="text-start ">
-                        <a href="camera.html" class="btn btn-lg btn-danger">Shop Cameras</a>
-                        <a href="" class="btn btn-lg btn-outline-light">Explore Accessories</a>
+                        <a href="camera.html" class="btn btn-lg  btn-danger">Shop Cameras</a>
+                        <a href="accessories.html" class="btn btn-lg btn-outline-light">Explore Accessories</a>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="images/Bunner/bunner2 (2).jpg" class="d-block w-100 carousel_image" alt="...">
                 <div class="carousel-caption translate-middle-y">
-                     <h5 class="text-start mb-3">Welcome to The Mirror</h5>
+                    <h5 class="text-start mb-3">Welcome to The Mirror</h5>
                     <h5 class="text-start display-6 fw-bold mb-2">See the World Through a Better Lens</h5>
                     <p class="text-start mb-4">Premium Cameras & Accessories at the Best Prices</p>
 
                     <div class="text-start ">
                         <a href="camera.html" class="btn btn-lg btn-danger">Shop Cameras</a>
-                        <a href="" class="btn btn-lg btn-outline-light">Explore Accessories</a>
+                        <a href="accessories.html" class="btn btn-lg btn-outline-light">Explore Accessories</a>
                     </div>
 
                 </div>
@@ -195,13 +194,13 @@
             <div class="carousel-item">
                 <img src="images/Bunner/bunner2 (3).jpg" class="d-block w-100 carousel_image" alt="...">
                 <div class="carousel-caption translate-middle-y">
-                     <h5 class="text-start mb-3">Welcome to The Mirror</h5>
+                    <h5 class="text-start mb-3">Welcome to The Mirror</h5>
                     <h5 class="text-start display-6 fw-bold mb-2">See the World Through a Better Lens</h5>
                     <p class="text-start mb-4">Premium Cameras & Accessories at the Best Prices</p>
 
                     <div class="text-start ">
                         <a href="camera.html" class="btn btn-lg btn-danger">Shop Cameras</a>
-                        <a href="" class="btn btn-lg btn-outline-light">Explore Accessories</a>
+                        <a href="accessories.html" class="btn btn-lg btn-outline-light">Explore Accessories</a>
                     </div>
                 </div>
             </div>
@@ -368,7 +367,7 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 ">
             <div class="col mb-3">
                 <a href="detail.html" class="text-decoration-none">
-                    <div class="card shadow-sm category-card h-100">
+                    <div class="card shadow-sm category-card ">
                         <img src="images/Featureproduct/cannon rf/cannon rf.jpg" alt=""
                             class="card-img-top product-img mb-5">
                         <div class="card-body">
@@ -383,7 +382,7 @@
             </div>
             <div class="col mb-3">
                 <a href="detail.html" class="text-decoration-none">
-                    <div class="card shadow-sm category-card h-100">
+                    <div class="card shadow-sm category-card ">
                         <img src="images/Featureproduct/Gopro/Goprohero 1.jpg" alt=""
                             class="card-img-top product-img mb-5">
                         <div class="card-body">
@@ -425,7 +424,7 @@
             </div>
             <div class="col mb-3">
                 <a href="detail.html" class="text-decoration-none">
-                    <div class="card shadow-sm category-card h-100">
+                    <div class="card shadow-sm category-card ">
                         <img src="images/Featureproduct/media/media1.jpg" alt="" class="card-img-top product-img mb-5">
                         <div class="card-body">
                             <p class="text-center">GoPro Media Mod for HERO9/HERO10 Black
@@ -439,7 +438,7 @@
             </div>
             <div class="col mb-3">
                 <a href="detail.html" class="text-decoration-none">
-                    <div class="card shadow-sm category-card h-100">
+                    <div class="card shadow-sm category-card ">
                         <img src="images/Featureproduct/produdctive/productive1.jpg" alt=""
                             class="img-fluid pt-3 category-card">
                         <div class="card-body">
@@ -512,9 +511,11 @@
             <ul class="nav">
                 <li class="nav-item"><a href="index.html" class="nav-link text-decoration-none text-white "> Home</a>
                 </li>
-                <li class nav-item><a href="#" class="nav-link text-decoration-none text-white ">About</a></li>
-                <li class nav-item><a href="#" class="nav-link text-decoration-none text-white ">Services</a></li>
-                <li class nav-item><a href="#" class="nav-link text-decoration-none text-white ">Contact</a></li>
+                <li class nav-item><a href="about.html" class="nav-link text-decoration-none text-white ">About</a></li>
+                <li class nav-item><a href="services.html"
+                        class="nav-link text-decoration-none text-white ">Services</a></li>
+                <li class nav-item><a href="contact.html" class="nav-link text-decoration-none text-white ">Contact</a>
+                </li>
             </ul>
         </div>
 

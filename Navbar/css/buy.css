@@ -1,0 +1,41 @@
+.payment-box{
+    background:white;
+    border-radius:20px;
+    padding:40px;
+    width:100%;
+    max-width:900px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+.payment-method{
+    cursor:pointer;
+    border:2px solid #eee;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
+    transition:0.3s;
+}
+.payment-method:hover{
+    border-color:#000000;
+}
+.payment-method.active{
+    border-color:#000000;
+   
+}
+.hidden{
+    display:none;
+}
+.success-box{
+    display:none;
+}
+
+.pos_buy{
+   
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.loca_hv:focus {
+    box-shadow: none !important;
+    border-color: #000000 !important;
+}

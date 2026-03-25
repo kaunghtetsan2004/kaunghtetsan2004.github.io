@@ -1,0 +1,27 @@
+/* ............Discount............ */
+
+.title_underline {
+  width: 100px;
+  height: 3px;
+  background-color: #dc3545;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  overflow: hidden;
+}
+
+.category-card {
+  overflow: hidden;
+}
+
+.category-card img {
+  filter: blur(60%);
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+
+/* ......x......Discount......x...... */
