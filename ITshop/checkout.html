@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <script class="fontawesome/js/all.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light px-4">
+      <span class="navbar-brand mb-0 h1">IT Shop</span>
+
+      <div class="d-flex align-items-center">
+        <a href="#" class="me-3 text-decoration-none text-dark">Home</a>
+        <div class="position-relative">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            id="count_item"
+          >
+            0
+          </span>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid my-4">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Item Name</th>
+            <th>Item Price</th>
+            <th>Item Qty</th>
+            <th>SubTotal</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider" id="shopTbody"></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4"><b>Total</b></td>
+            <td id="total">0</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

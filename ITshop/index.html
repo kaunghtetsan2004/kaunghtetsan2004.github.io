@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Shop</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <script class="fontawesome/js/all.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-light bg-light px-4">
+    <span class="navbar-brand mb-0 h1">IT Shop</span>
+
+    <div class="d-flex align-items-center">
+      <a href="#" class="me-3 text-decoration-none text-dark">Home</a>
+      <div class="position-relative">
+        <a href="checkout.html" class="text-decoration-none">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="count_item">
+          0
+        </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Products -->
+  <div class="container my-4">
+    <div class="row g-4">
+
+      <!-- Product Card -->
+      <!-- Repeat this block -->
+      <div class="col-md-3">
+        <div class="card h-100 text-center">
+          <img src="" class="card-img-top p-3" alt="Laptop">
+          <div class="card-body">
+            <h5 class="card-title" id="name">Laptop 1</h5>
+            <p class="card-text" id="price">Price : 2300000 MMK</p>
+            <button class="btn btn-primary addToCart" data-id="1" data-name="Laptop 1" data-price="2300000">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card h-100 text-center">
+          <img src="" class="card-img-top p-3">
+          <div class="card-body">
+            <h5>Laptop 2</h5>
+            <p>Price : 2000000</p>
+            <button class="btn btn-primary addToCart" data-id="2" data-name="Laptop 2" data-price="2000000">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card h-100 text-center">
+          <img src="" class="card-img-top p-3">
+          <div class="card-body">
+            <h5>Laptop 3</h5>
+            <p>Price : 1900000</p>
+            <button class="btn btn-primary addToCart" data-id="3" data-name="Laptop 3" data-price="1900000">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card h-100 text-center">
+          <img src="" class="card-img-top p-3">
+          <div class="card-body">
+            <h5>Laptop 4</h5>
+            <p>Price : 1850000</p>
+            <button class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhones -->
+      <div class="col-md-3">
+        <div class="card h-100 text-center">
+          <img src="" class="card-img-top p-3">
+          <div class="card-body">
+            <h5>iPhone 1</h5>
+            <p>Price : 3400000</p>
+            <button class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card h-100 text-center">
+          <img src="" class="card-img-top p-3">
+          <div class="card-body">
+            <h5>iPhone 2</h5>
+            <p>Price : 3200000</p>
+            <button class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card h-100 text-center">
+          <img src="" class="card-img-top p-3">
+          <div class="card-body">
+            <h5>iPhone 3</h5>
+            <p>Price : 3100000</p>
+            <button class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card h-100 text-center">
+          <img src="" class="card-img-top p-3">
+          <div class="card-body">
+            <h5>iPhone 4</h5>
+            <p>Price : 3000000</p>
+            <button class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="jquery.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
