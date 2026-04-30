@@ -33,7 +33,7 @@ $(document).ready(function () {
                 <td>${v.name}</td>
                 <td>${v.price}</td>
                 <td>
-                <button class="minus" data-id="${v.id}">-</button>
+                <button class="minus" data-id="${i}">-</button>
                  ${v.qty}
                 <button class="plus" data-id="${v.id}">+</button>
                 </td>
@@ -62,13 +62,17 @@ $(document).ready(function () {
     getData();
 });
 
-$(document).on('click', '.minus', function(){
-    let id = $(this).data('id');
+$('#shopTbody').on('click', '.minus', function(){
+    let key = $(this).data('id');
     let shopArray = JSON.parse(localStorage.getItem('shops'));
 
     $.each(shopArray, function(i,v){
-        if(v.id == id && v.qty > 1){
+        if(key == i ){
             v.qty--;
+            if(v.qty <= 0){
+                shopArray.splice(key,1);
+                return false;
+            }
         }
     });
 
@@ -119,5 +123,13 @@ $(document).on('click', '.minus', function(){
         count();
         getData();
     });
+
+    $('#order_now').click(function(){
+        let ans = confirm('Are you sure order?');
+        if(ans){
+            localStorage.removeItem('shops');
+            window.location.href = 'index.html';
+        }
+    })
 });
 
