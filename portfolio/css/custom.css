@@ -1,0 +1,32 @@
+.nav_hover a{
+    position: relative;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.nav_hover a::after{
+
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #007bff;
+    transform: scaleX(0);
+    opacity: 0;
+    transition: transform .4s linear;
+
+}
+
+.nav_hover a:hover::after{
+    transform: scaleX(1);
+    opacity: 1;
+
+}
+
+.text-justify {
+  text-align: justify;
+  word-spacing: 2px;
+}
