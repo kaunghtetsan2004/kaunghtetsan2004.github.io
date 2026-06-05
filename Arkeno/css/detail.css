@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+   --primary: #F76731;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.container {
+   width: 100vw;
+   height: 100vh;
+   background: #DDE4EA;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 600px;
+    background: white;
+    border-radius: 26px;
+    border: 4px solid white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.02)
+}
+
+.image-container {
+  width: 100%;
+  height: 55%;
+  object-fit: cover;
+  background-position: top;
+  background-size: 100% auto;
+  transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.image-container:hover {
+   background-size: 110% auto;
+}
+
+.gradient {
+   position: absolute;
+   width: 100%;
+   height: 55%;
+background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%);
+   z-index: 5;
+  pointer-events: none;
+}
+
+.row-1 {
+   margin-top: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 20px;
+}
+
+.title {
+  font-weight: 500;
+   font-size: 26px;
+}
+
+.price {
+   color: var(--primary);
+   font-weight: 500;
+   font-size: 24px;
+}
+
+.product-options {
+   position: absolute;
+   width: 100%;
+   margin-top: 16px;
+   padding: 5px 15px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.back-button {
+   width: 38px;
+   height: 38px;
+   display: grid;
+   place-items: center;
+   border-radius: 50%;
+   color: var(--primary);
+   cursor: pointer;
+   background: background;
+   box-shadow: 0 5px 8px rgba(0,0,0,0.05)
+}
+
+.more-options-container {
+   width: 40px;
+   position: absolute;
+   right: 18px;
+   top: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   z-index: 5;
+}
+
+.more-options-btn {
+   width: 38px;
+   height: 38px;
+   display: grid;
+   place-items: center;
+   background: rgb(105,159,218);
+background: linear-gradient(176deg, rgba(105,159,218,1) 0%, rgba(89,127,228,1) 100%);
+   color: white;
+   border-radius: 50%;
+   cursor: pointer;
+   box-shadow: 0 3px 9px rgba(0,0,0,0.2);
+   border: 1px solid rgba(141, 169, 236 ,0.35);
+   margin-bottom: 10px;
+}
+
+
+.more-options {
+   width: 45px;
+   padding: 18px 0; 
+   background: white;
+   border-radius: 40px;
+   display: none;
+   flex-direction: column;
+   justify-content: center;
+   gap: 18px;
+   transform-origin: top;
+   overflow: hidden;
+}
+
+.more-options i{
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.more-options i:hover {
+   color: var(--primary);
+   text-shadow: 0 2px 8px;
+}
+
+.more-options .bi-heart-fill {
+   color: var(--primary);
+   text-shadow: 0 2px 8px;
+
+}
+
+.show-options {
+   display: flex;
+}
+
+.row-2 {
+   margin-top: 10px;
+   display: flex;
+   align-items: center;
+   padding: 0 20px;
+}
+
+.color-text {
+   margin-right: 10px;
+   font-size: 18px;
+}
+
+.available-colors {
+  display: flex;
+  gap: 7px;
+  background-color: blue !important;
+}
+
+.color-item {
+   width: 26px;
+   height: 26px;
+   border-radius: 50%;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+   cursor: pointer;
+}
+
+.row-3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px 18px;
+}
+
+.row-3 p {
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+
+.add-to-cart-btn {
+
+   background: rgb(105,159,218);
+   background: linear-gradient(176deg, rgba(105,159,218,1) 0%, rgba(89,127,228,1) 100%);
+   border: 0;
+   color: white;
+   text-shadow: 0 3px 5px rgba(0,0,0,0.18);
+   font-size: 18px;
+   width: 100%;
+   height: 68px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 13px;
+}
+
+.add-to-cart-btn:hover {
+   background: rgb(72,150,235);
+background: linear-gradient(176deg, rgba(72,150,235,1) 0%, rgba(49,99,231,1) 100%);
+}
