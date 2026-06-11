@@ -155,3 +155,35 @@
 .subMit:hover{
     transform: translateY(-2px);
 }
+
+.confirm{
+    margin-top: 120px;
+}
+
+.confirm{
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid rgba(20, 18, 18, 0.15) ;
+    padding: 100px 200px;
+    border-radius: 12px;
+    
+}
+
+.circle{
+    margin: auto;
+    background-color: green;
+    color: #ffffff;
+    width: 10vh;
+    padding: 3vh;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.con_btn{
+    color: #ffffff;
+    background-color: #f15a29;
+    width: 150px;
+    border-radius: 20px;
+    margin: auto;
+}
