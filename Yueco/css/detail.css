@@ -147,13 +147,14 @@
 
 /* Submit Button */
 .subMit{
-    border-radius: 30px;
-    padding: 10px 20px;
-    transition: .3s;
+    
+    color: #f15a29 !important;
+    background-color: #fff !important;
 }
 
 .subMit:hover{
-    transform: translateY(-2px);
+    color: #ffffff  !important;
+    background-color: #f15a29 !important;
 }
 
 .confirm{
@@ -186,4 +187,8 @@
     width: 150px;
     border-radius: 20px;
     margin: auto;
+}
+
+.table{
+    margin-top: 150px;
 }

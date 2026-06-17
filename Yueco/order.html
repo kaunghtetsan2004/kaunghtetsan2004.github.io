@@ -1,32 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Arkeno is your trusted online shopping destination for quality products at affordable prices. We offer a seamless shopping experience with secure payments, fast">
-    <meta name="keywords" content="Arkeno, arkeno, ar, arkeno online shop">
-    <meta name="robots" content="index, follow">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
     <!-- icon -->
-    <title>YUECO</title>
-    <link rel="icon" href="assets/PNGs-19.png">
+  <title>YUECO</title>
+  <link rel="icon" href="assets/PNGs-19.png">
 
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
 
-    <!-- css -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- css -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/detail.css">
 
-</head>
 
-<body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <script class="fontawesome/js/all.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div class="container d-flex align-items-center">
             <!-- Mobile Menu Button -->
@@ -120,101 +123,92 @@
         </div>
     </div>
 
-    <!-- Masthead-->
-    <header class="masthead">
-        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-            <div class="d-flex justify-content-center">
-                <div class="text-center">
-                    <h1 class="mx-auto my-0 p-2 text-uppercase text-white">YUECO</h1>
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5 slogan">Confidence Starts with What You Wear.</h2>
-                    <a class="btn bunner_btn" href="#prd">
-                        <i class="fa-solid fa-bag-shopping"></i>Buy Now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <div class="container my-5">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th> Name</th>
+            <th> Price</th>
+            <th>Color</th>
+            <th>Size</th>
+            <th> Qty</th>
+            <th>SubTotal</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider" id="shopTbody"></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6"><b>Total</b></td>
+            <td id="total">0</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    
 
-    <!-- Product -->
-     <section class="container" id="prd">
-        <div class="my-5">
-            <h4 class="text-center">REMEMBERING <span class="phead ms-2">YUECO</span></h4>
-            <p class="text-center text-muted">Merchandise Collection</p>
-            <p class="under_line mx-auto my-3"></p>
+    <!-- Payment Section -->
+  <section class="container py-5">
+    <div class="form-box login form payment-form">
+      <form id="form" method="POST" enctype="multipart/form-data">
+        <h3 class="text-center fw-bold mb-4">Payment</h3>
+
+        <div class="input-box mb-3">
+          <input type="text" id="name" placeholder="Name" required>
         </div>
 
-        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
-            <div class="col mb-3 ">
-                <a href="product1.html" >
-                <div class="card border-0">
-                    <img src="assets/PNGs-01.png" class="card-img-top  " alt="">
-                    <div class="card-body">
-                        <!-- <p class="text-center">ARKENO ATTITUDE T-SHIRT CHARCOAL</p>
-                        <h5 class="text-center price">645000 MMK</h5> -->
-                    </div>
-                </div>
-                </a>
-            </div>
-            <div class="col mb-3  ">
-                <div class="card border-0">
-                    <img src="assets/PNGs-05.png" class="card-img-top  " alt="">
-                    <div class="card-body">
-                        <!-- <p class="text-center">ARKENO ATTITUDE T-SHIRT CHARCOAL</p>
-                        <h5 class="text-center price">645000 MMK</h5> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-3 ">
-                <div class="card border-0">
-                    <img src="assets/PNGs-11.png" class="card-img-top " alt="">
-                    <div class="card-body">
-                        <!-- <p class="text-center">ARKENO ATTITUDE T-SHIRT CHARCOAL</p>
-                        <h5 class="text-center price">645000 MMK</h5> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-3 ">
-                <div class="card border-0">
-                    <img src="assets/PNGs-13.png" class="card-img-top " alt="">
-                    <div class="card-body">
-                        <!-- <p class="text-center">ARKENO ATTITUDE T-SHIRT CHARCOAL</p>
-                        <h5 class="text-center price">645000 MMK</h5> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-3 ">
-                <div class="card border-0">
-                    <img src="assets/PNGs-17.png" class="card-img-top " alt="">
-                    <div class="card-body">
-                        <!-- <p class="text-center">ARKENO ATTITUDE T-SHIRT CHARCOAL</p>
-                        <h5 class="text-center price">645000 MMK</h5> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-3 ">
-                <div class="card border-0">
-                    <img src="assets/PNGArtboard-22.png" class="card-img-top " alt="">
-                    <div class="card-body">
-                        <!-- <p class="text-center">ARKENO ATTITUDE T-SHIRT CHARCOAL</p>
-                        <h5 class="text-center price">645000 MMK</h5> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-3 ">
-                <div class="card border-0">
-                    <img src="assets/PNGArtboard-11.png" class="card-img-top " alt="">
-                    <div class="card-body">
-                        <!-- <p class="text-center">ARKENO ATTITUDE T-SHIRT CHARCOAL</p>
-                        <h5 class="text-center price">645000 MMK</h5> -->
-                    </div>
-                </div>
-            </div>
+        <div class="input-box mb-3">
+          <input type="tel" id="phone" placeholder="Phone" required>
         </div>
-        
-        <div class="line mx-auto mb-5"></div>
-     </section>
 
-     <footer class="container">
+        <div class="input-box mb-3">
+          <input type="text" id="rollno" placeholder="Roll No." required>
+        </div>
+
+        <div class="input-box mb-3">
+          <input type="text" id="major" placeholder="Major" required>
+        </div>
+
+        <!-- Payment Choice -->
+        <!-- <div class="payment-method mb-4">
+          <label class="method-card">
+            <input type="radio" name="payment" value="kpay" checked>
+            <span> <img src="assets/kpay.png" class="w-25" alt=""> KPay</span>
+          </label>
+
+          <label class="method-card">
+            <input type="radio" name="payment" value="wavepay">
+            <span> <img src="assets/wavemoney.jpg" class="w-25" alt=""> Wave Pay</span>
+          </label>
+        </div> -->
+
+
+        <!-- <div class="text-center mb-4">
+          <img id="qrImage" src="assets/kpay.png" style="max-width:250px;" alt="QR Code">
+        </div> -->
+        <!-- Upload Screenshot -->
+        <!-- <div class="upload-box mb-4">
+          <label for="paymentSlip" class="upload-label">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>Upload Payment Screenshot</span>
+          </label>
+          <input type="file" id="paymentSlip" hidden required>
+        </div> -->
+
+        <div class="text-center">
+          <button type="submit" class="btn subMit w-50">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+    <div class="container my-5">
+      <div class="line"></div>
+    </div>
+
+    <footer class="container">
         <ul class="navbar-nav mb-3">
             <li class="nav-item">
                 <a href="" class="nav-link">CONTACT</a>
@@ -269,6 +263,61 @@
         document.getElementById('year').innerHTML = new Date().getFullYear();
     </script>
 
+    <script>
+document.getElementById("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Form data
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const rollno = document.getElementById("rollno").value;
+    const major = document.getElementById("major").value;
+    const total = document.getElementById("total").innerText;
+
+    // Get table data
+    let orderDetails = "";
+    const rows = document.querySelectorAll("#shopTbody tr");
+
+    rows.forEach((row, index) => {
+        const cols = row.querySelectorAll("td");
+
+        orderDetails += `
+${index + 1}. ${cols[1]?.innerText || ""}
+   Price : ${cols[2]?.innerText || ""}
+   Color : ${cols[3]?.innerText || ""}
+   Size  : ${cols[4]?.innerText || ""}
+   Qty   : ${cols[5]?.innerText || ""}
+   SubTotal : ${cols[6]?.innerText || ""}
+`;
+    });
+
+    // Final message
+    const message = `
+🛒 NEW ORDER
+
+👤 Name : ${name}
+📞 Phone : ${phone}
+🎓 Roll No : ${rollno}
+📚 Major : ${major}
+
+━━━━━━━━━━━━━━
+📦 ORDER ITEMS
+━━━━━━━━━━━━━━
+${orderDetails}
+
+💰 TOTAL : ${total}
+`;
+
+    // Open Telegram with message
+    const telegramUsername = "VIPER2005"; // without @
+
+    const telegramUrl =
+        `https://t.me/${telegramUsername}?text=${encodeURIComponent(message)}`;
+
+    window.open(telegramUrl, "_blank");
+});
+</script>
+
     <!-- bootsrap -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
@@ -277,9 +326,8 @@
 
     <!-- js -->
     <script src="javaScript/style.js"></script>
-    <script src="javaScript/detail.js"></script>
+
     <script src="javaScript/jquery.min.js"></script>
-
-</body>
-
+    <script src="javaScript/detail.js"></script>
+  </body>
 </html>

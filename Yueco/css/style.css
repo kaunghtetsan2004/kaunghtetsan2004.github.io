@@ -10,6 +10,8 @@
     font-weight: bold;
 }
 
+
+
 .logo{
     width: 150px;
     height: 150px;
@@ -59,12 +61,12 @@
 }
 
 .nav-item a:hover{
-    color: #c19a18 !important;
+    color: #f15a29 !important;
 }
 
 /* Optional: change link colors */
 #mainNav.scrolled .nav-link a:hover{
-    color: #c19a18;
+    color: #f15a29;
 }
 #mainNav.scrolled i {
     color: #ffffff !important;
@@ -87,7 +89,7 @@
 }
 
 .masthead a:hover{
-    color:#c19a18;
+    color: #f15a29;
     background-color: #ffffff;
 }
 

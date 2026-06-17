@@ -135,6 +135,55 @@ $(document).ready(function () {
         alert('Product added to cart!');
     });
 
+    $('.byNow').click(function () {
+
+        let id = $(this).data('id');
+        let name = $(this).data('name');
+        let price = $(this).data('pricce');
+
+        let color = $('.color-btn.active').attr('title') || 'Black';
+        let size = $('input[name="size"]:checked').next('label').text();
+        let qty = parseInt($('#qty').val());
+
+        let shop_items = {
+            id: id,
+            name: name,
+            price: price,
+            color: color,
+            size: size,
+            qty: qty
+        };
+
+        let shopString = localStorage.getItem('shops');
+        let shopArray;
+
+        if (shopString == null) {
+            shopArray = [];
+        } else {
+            shopArray = JSON.parse(shopString);
+        }
+
+        let status = false;
+
+        $.each(shopArray, function (i, v) {
+
+            if (id == v.id && color == v.color && size == v.size) {
+                status = true;
+                v.qty += qty;
+            }
+        });
+
+        if (status == false) {
+            shopArray.push(shop_items);
+        }
+
+        localStorage.setItem('shops', JSON.stringify(shopArray));
+
+        count();
+
+        alert('Product buy now!');
+    });
+
     $('#order_now').click(function () {
 
         let ans = confirm('Are you sure order?');
