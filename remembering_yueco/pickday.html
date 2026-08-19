@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Arkeno is your trusted online shopping destination for quality products at affordable prices. We offer a seamless shopping experience with secure payments, fast">
+    <meta name="keywords" content="Arkeno, arkeno, ar, arkeno online shop">
+    <meta name="robots" content="index, follow">
+
+    <!-- icon -->
+    <title>YUECO</title>
+    <link rel="icon" href="assets/PNGs-19.png">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ship.css">
+
+
+    <!-- javaScript -->
+    <script src="javaScript/jquery.min.js"></script>
+
+    <!--
+      ================================================================
+      SMOOTHNESS ENHANCEMENT LAYER
+      This block ONLY adds transitions/transforms/timing/motion.
+      It never sets a color, background-color, border-color, or
+      box-shadow color — so your existing palette is untouched.
+      Loaded last so it can gently refine (not fight) ship.css.
+      ================================================================
+    -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Respect users who prefer reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            * {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.001ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Navbar: smoother state change instead of an abrupt snap */
+        #mainNav {
+            transition: background-color .35s ease, box-shadow .35s ease, padding .35s ease;
+        }
+
+        #mainNav .nav-link {
+            transition: opacity .25s ease, transform .25s ease;
+        }
+
+        #mainNav .nav-link:hover {
+            opacity: .75;
+            transform: translateY(-1px);
+        }
+
+        .navbar-toggler {
+            transition: transform .2s ease;
+        }
+
+        .navbar-toggler:active {
+            transform: scale(.92);
+        }
+
+        /* Offcanvas menu items ease in on hover */
+        .offcanvas .list-group-item a {
+            display: inline-block;
+            transition: transform .2s ease, opacity .2s ease;
+        }
+
+        .offcanvas .list-group-item a:hover {
+            transform: translateX(4px);
+            opacity: .8;
+        }
+
+        /* Event hero: gentle entrance so content doesn't just pop in */
+        .event-hero .eyebrow,
+        .event-hero .headline,
+        .event-hero .rule,
+        .event-hero .event-intro,
+        .event-hero .ticket-row,
+        .event-hero .event-closing {
+            opacity: 0;
+            transform: translateY(16px);
+            animation: yueco-fade-up .7s ease forwards;
+        }
+
+        .event-hero .eyebrow {
+            animation-delay: .05s;
+        }
+
+        .event-hero .headline {
+            animation-delay: .15s;
+        }
+
+        .event-hero .rule {
+            animation-delay: .25s;
+            transform-origin: left center;
+        }
+
+        .event-hero .event-intro {
+            animation-delay: .35s;
+        }
+
+        .event-hero .ticket-row {
+            animation-delay: .45s;
+        }
+
+        .event-hero .event-closing {
+            animation-delay: .6s;
+        }
+
+        @keyframes yueco-fade-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Ticket card: subtle lift + shadow on hover, no color change */
+        .ticket {
+            transition: transform .35s cubic-bezier(.22, 1, .36, 1), box-shadow .35s ease;
+            will-change: transform;
+        }
+
+        .ticket:hover {
+            transform: translateY(-6px);
+        }
+
+        .ticket-mark {
+            transition: transform .3s ease;
+        }
+
+        .ticket:hover .ticket-mark {
+            transform: scale(1.05);
+        }
+
+        /* Partner logo slider: smoother, linear, uninterrupted marquee */
+        .logo-slider {
+            overflow: hidden;
+        }
+
+        .logo-track {
+            animation: yueco-scroll linear infinite;
+            animation-duration: 28s;
+        }
+
+        .logo-track:hover {
+            animation-play-state: paused;
+        }
+
+        .logo {
+            transition: transform .3s ease, opacity .3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.06);
+        }
+
+        @keyframes yueco-scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Footer links + social icons: soft hover feedback */
+        footer .nav-link {
+            transition: opacity .25s ease, transform .25s ease;
+        }
+
+        footer .nav-link:hover {
+            opacity: .7;
+            transform: translateY(-2px);
+        }
+
+        .social_icon a {
+            display: inline-block;
+            transition: transform .3s cubic-bezier(.34, 1.56, .64, 1), opacity .3s ease;
+        }
+
+        .social_icon a:hover {
+            transform: translateY(-4px) scale(1.12);
+            opacity: .85;
+        }
+
+        /* Scroll-reveal utility (applied via JS below) */
+        .yueco-reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .7s ease, transform .7s cubic-bezier(.22, 1, .36, 1);
+        }
+
+        .yueco-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Cart badge: gentle pop when count changes */
+        #count_item {
+            transition: transform .25s ease;
+        }
+
+        /* ============================================================
+           EVENT-HERO REDESIGN
+           Layout / structure only — every rule below uses currentColor,
+           inherit, or transparent. No hex/rgb/named colors introduced,
+           so the existing palette from ship.css is fully preserved.
+           ============================================================ */
+
+        .event-hero .container {
+            max-width: 720px;
+        }
+
+        .event-hero .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            font-size: .78rem;
+        }
+
+        .event-hero .eyebrow::before,
+        .event-hero .eyebrow::after {
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 1px;
+            background: currentColor;
+            opacity: .5;
+        }
+
+        .event-hero .rule {
+            width: 64px;
+            height: 2px;
+            background: currentColor;
+            opacity: .25;
+            margin: 1.25rem auto;
+        }
+
+        /* Pass / ticket card, rebuilt as a bordered pass with a torn stub */
+        .ticket-row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .ticket {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: stretch;
+            width: 100%;
+            max-width: 460px;
+            border: 1px solid currentColor;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .ticket-main {
+            padding: 1.75rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: .6rem;
+        }
+
+        .ticket-eyebrow {
+            font-size: .72rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            opacity: .6;
+        }
+
+        .ticket-city {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: .55rem;
+        }
+
+        .ticket-city::before {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            content: "\f3c5"; /* map-marker */
+            font-size: 1rem;
+            opacity: .7;
+        }
+
+        .ticket-date {
+            margin: 0;
+            font-size: .92rem;
+            display: flex;
+            align-items: center;
+            gap: .55rem;
+            opacity: .85;
+        }
+
+        .ticket-date:nth-of-type(1)::before {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            content: "\f015"; /* home / room */
+            font-size: .85rem;
+            opacity: .6;
+            width: 1rem;
+        }
+
+        .ticket-date:nth-of-type(2)::before {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            content: "\f073"; /* calendar */
+            font-size: .85rem;
+            opacity: .6;
+            width: 1rem;
+        }
+
+        /* Perforated divider between main pass and the stub */
+        .ticket-stub {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 96px;
+            border-left: 1px dashed currentColor;
+            opacity: .95;
+        }
+
+        .ticket-stub::before,
+        .ticket-stub::after {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 1px solid currentColor;
+            background: transparent;
+            left: -8px;
+        }
+
+        .ticket-stub::before {
+            top: -8px;
+        }
+
+        .ticket-stub::after {
+            bottom: -8px;
+        }
+
+        .ticket-mark {
+            writing-mode: vertical-rl;
+            letter-spacing: .22em;
+            font-weight: 700;
+            font-size: .82rem;
+            text-transform: uppercase;
+        }
+
+        .event-intro {
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .event-closing {
+            line-height: 1.7;
+        }
+
+        /* Notice line, restyled as a prominent alert bar instead of a bare paragraph */
+        .event-hero + p.my-5,
+        .event-hero ~ p.my-5 {
+            max-width: 640px;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            padding: 1.1rem 1.5rem;
+            border: 2px solid currentColor;
+            border-radius: 12px;
+            background: color-mix(in srgb, currentColor 10%, transparent);
+            font-size: .95rem;
+            font-weight: 600;
+            letter-spacing: .01em;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .7rem;
+            animation: yueco-pulse 2.4s ease-in-out infinite;
+        }
+
+        .event-hero + p.my-5 i,
+        .event-hero ~ p.my-5 i {
+            font-size: 1.15rem;
+            flex-shrink: 0;
+            animation: yueco-shake 3.5s ease-in-out infinite;
+        }
+
+        @keyframes yueco-pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 color-mix(in srgb, currentColor 35%, transparent);
+            }
+
+            50% {
+                box-shadow: 0 0 0 8px transparent;
+            }
+        }
+
+        @keyframes yueco-shake {
+
+            0%,
+            88%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            90% {
+                transform: rotate(-8deg);
+            }
+
+            92% {
+                transform: rotate(8deg);
+            }
+
+            94% {
+                transform: rotate(-6deg);
+            }
+
+            96% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ticket {
+                grid-template-columns: 1fr;
+            }
+
+            .ticket-stub {
+                width: 100%;
+                border-left: none;
+                border-top: 1px dashed currentColor;
+                padding: .6rem 0;
+            }
+
+            .ticket-stub::before,
+            .ticket-stub::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .ticket-stub::before {
+                top: -8px;
+            }
+
+            .ticket-stub::after {
+                bottom: -8px;
+                top: auto;
+            }
+
+            .ticket-mark {
+                writing-mode: horizontal-tb;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-black  fixed-top" id="mainNav">
+        <div class="container d-flex align-items-center">
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler border-0 d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+
+            <!-- Left Menu -->
+            <div class="d-none d-lg-flex">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link me-3" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="index.html#prd">Shop</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="shipping.html">Pickup Day</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="https://t.me/rememberingyueco26">Contact</a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <!-- Center Logo -->
+            <a class="navbar-brand mx-auto position-absolute start-50 translate-middle-x" href="#">
+                <img src="assets/Logo.png" alt="Logo" class="logo" height="60">
+            </a>
+
+            <!-- Right Cart -->
+            <div class="navbar d-flex flex-lg-row align-items-end justify-content-start  ms-auto ">
+
+
+
+                <div class="position-relative mt-2 me-4">
+                    <a href="order.html" class="btn text-white">
+                        <i class="fa-solid fa-bag-shopping fa-lg"></i>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-white text-black"
+                            id="count_item">0
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- Mobile View -->
+    <div class="offcanvas offcanvas-start bg-black text-white" tabindex="-1" id="mobileMenu">
+
+        <div class="offcanvas-body p-0">
+
+            <div class="m-3 ms-5 fw-bold">
+                <h5 class="slogan">YUECO Remembering</h5>
+            </div>
+
+            <ul class="list-group list-group-flush">
+
+                <li class="list-group-item bg-black">
+                    <a href="index.html" class="text-white text-decoration-none">HOME</a>
+                </li>
+
+                <li class="list-group-item bg-black">
+                    <a href="index.html#prd" class="text-white text-decoration-none">
+                        SHOP
+                    </a>
+                </li>
+
+                <li class="list-group-item bg-black">
+                    <a href="about.html" class="text-white text-decoration-none">
+                        ABOUT
+                    </a>
+                </li>
+
+                <li class="list-group-item bg-black">
+                    <a href="shipping.html" class="text-white text-decoration-none">
+                        Pickup Day
+                    </a>
+                </li>
+
+                <li class="list-group-item bg-black">
+                    <a class="text-white text-decoration-none" href="https://t.me/rememberingyueco26">
+                        CONTACT
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- ......... Pickup Event.......... -->
+    <section class="event-hero">
+        <div class="container">
+            <p class="eyebrow">An Exclusive Pickup Experience</p>
+            <h3 class="headline"> <em>Pickup</em> Event</h3>
+            <div class="rule"></div>
+            <p class="event-intro">
+                Thoughtfully arranged for your convenience we are delighted to
+                announce our upcoming Pickup Events. Save the dates and
+                join us for a <strong>refined, seamless</strong> pickup experience.
+            </p>
+
+            <div class="ticket-row">
+                <div class="ticket">
+                    <div class="ticket-main">
+                        <div class="ticket-eyebrow">Pickup Location </div>
+                        <p class="ticket-city">Kamayut</p>
+                        <p class="ticket-date">Room No. 221</p>
+                        <p class="ticket-date">20 August 2026 (10:00 AM)</p>
+                    </div>
+                    <div class="ticket-stub">
+                        <span class="ticket-mark">YUECO</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="event-closing">Your order. Your moment. Your experience.<br>We look forward to welcoming you.</p>
+        </div>
+
+        <p class="my-5 text-danger">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>Those who wish to purchase after the pre-order period has closed may do so on the day of the Ywar Thar Gyi Job Fair.</span>
+        </p>
+    </section>
+
+    <!-- ..........Our Partner.......... -->
+    <div class="container partners-wrap yueco-reveal">
+        <div class="text-center">
+            <h3 class="slogan">Organized <span class="text-black">By</span></h3>
+        </div>
+        <div class="logo-slider">
+            <div class="logo-track">
+
+                <!-- Original -->
+                <div class="logo"><img src="assets/ye.png" alt=""></div>
+                <div class="logo"><img src="assets/rc.png" alt=""></div>
+                <div class="logo"><img src="assets/ar.png" alt=""></div>
+                <div class="logo"><img src="assets/vb.png" alt=""></div>
+                <div class="logo"><img src="assets/bh.png" alt=""></div>
+
+                <!-- Duplicate -->
+                <div class="logo"><img src="assets/ye.png" alt=""></div>
+                <div class="logo"><img src="assets/rc.png" alt=""></div>
+                <div class="logo"><img src="assets/ar.png" alt=""></div>
+                <div class="logo"><img src="assets/vb.png" alt=""></div>
+                <div class="logo"><img src="assets/bh.png" alt=""></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="line mx-auto mb-5"></div>
+
+    <!-- footer -->
+    <footer class="container yueco-reveal">
+        <ul class="navbar-nav mb-3">
+            <li class="nav-item">
+                <a href="https://t.me/rememberingyueco26" class="nav-link">CONTACT</a>
+            </li>
+            <li class="nav-item">
+                <a href="shipping.html" class="nav-link">SHIPPNG POLICY</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://t.me/rememberingyueco26" class="nav-link">CHAT</a>
+            </li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">ABOUT</a>
+            </li>
+        </ul>
+        <div>
+            <h4 class="fw-bold">Follow Us</h4>
+        </div>
+        <div class="social_icon my-3">
+            <a href="https://www.facebook.com/share/1DCMSdD6Nh/?mibextid=wwXIfr" class="">
+                <i class="fa-brands fa-facebook "></i>
+            </a>
+            <a href="https://www.tiktok.com/@rememberingyueco?_r=1&_t=ZS-97OmPeC7aRp">
+                <i class="fa-brands fa-tiktok "></i>
+            </a>
+            <a href="https://t.me/rememberingyueco26">
+                <i class="fa-brands fa-telegram "></i>
+            </a>
+        </div>
+        <div class="ftline my-3"></div>
+        <div class="copyright">
+            <p class="text-center"> Copyright
+                &copy; <span id="year"></span> Remembering YUECO. Some rights reversed.
+            </p>
+        </div>
+    </footer>
+
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('mainNav');
+
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        document.getElementById('year').innerHTML = new Date().getFullYear();
+
+        // --- Smoothness enhancement: scroll-reveal for sections below the fold ---
+        (function () {
+            const revealEls = document.querySelectorAll('.yueco-reveal');
+            if (!revealEls.length || !('IntersectionObserver' in window)) {
+                revealEls.forEach(el => el.classList.add('is-visible'));
+                return;
+            }
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            revealEls.forEach(el => io.observe(el));
+        })();
+    </script>
+
+    <!-- bootsrap -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- fontawesome -->
+    <script src="fontawesome/js/all.min.js"></script>
+
+    <!-- js -->
+    <script src="javaScript/style.js"></script>
+    <script src="javaScript/detail.js"></script>
+
+</body>
+
+</html>
