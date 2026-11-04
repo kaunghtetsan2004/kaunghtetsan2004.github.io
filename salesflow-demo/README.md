@@ -3,7 +3,7 @@
 An interactive, front-end-only version of **SalesFlow**, a sales entry and reporting system built for a clothing retailer in Yangon.
 The production app runs on Vercel serverless functions with Google Sheets as the database; this demo swaps the backend for an in-browser store so anyone can try it safely.
 
-**Stack:** vanilla HTML, CSS and JavaScript · hand-drawn SVG charts · no framework, no build step.
+**Stack:** vanilla HTML, CSS and JavaScript · hand-drawn SVG charts · no framework, no build step, no CDN or online links (Geist fonts are bundled in `fonts/`, SIL Open Font License).
 
 ## What you can try
 
@@ -41,6 +41,7 @@ Then link to it from your portfolio project card, e.g. `https://kaunghtetsan.onl
 
 ```
 index.html        app shell
+fonts/            Geist + Geist Mono (woff2, OFL licence)
 css/styles.css    design tokens (light + dark), layout, components
 js/store.js       sample-data generator + localStorage store (stands in for the Sheets API)
 js/charts.js      analytics (totals, buckets) + SVG line chart and bar list
