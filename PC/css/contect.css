@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #474545;
+}
+
+/* start nav word */
+.navbg {
+    position: absolute;
+    position: fixed;
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    width: 99.8%;
+    height: 110px;
+}
+
+
+.navword {
+    color: #ffffff;
+    font-size: 80px;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.navword {
+    margin-top: 120px;
+}
+
+.logo {
+    position: relative;
+    position: fixed;
+}
+
+.logo img {
+    position: absolute;
+    width: 60px;
+    top: 25px;
+    left: 30px;
+}
+
+.name {
+
+    position: absolute;
+    color: #ffffff;
+    top: 40px;
+    left: 5%;
+    font-family: 'a';
+}
+
+.name h2 {
+    position: fixed;
+}
+
+.nav {
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    position: fixed;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+
+.nav button,
+.sec button {
+    color: #ffffff;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    padding: 10px;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.nav button {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+}
+
+@font-face {
+    src: url('../Gravitas_One/GravitasOne-Regular.ttf');
+    font-family: 'a';
+}
+
+.nav div,
+.sec div {
+    display: inline-block;
+}
+
+.nav button:hover {
+    transform: translateY(-3px);
+    transition-duration: 10ms;
+    color: #eeeded;
+}
+
+/* end nav */
+
+/* start body */
+
+.word1 {
+    position: absolute;
+    top: 12%;
+}
+
+.word1 {
+    background-color: #665d5d;
+    height: 40px;
+    width: 100%;
+}
+
+.word h3 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+
+.word1 h2 {
+    position: absolute;
+    top: 13%;
+    left: 5%;
+}
+
+.word h3,
+h4,
+h5 {
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.word1 h2 {
+    color: #ffffff;
+}
+
+.word h4 {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+}
+
+.word h5 {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    line-height: 1.4;
+}
+
+.map {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 10px;
+    height: 10px;
+}
+
+.form {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+
+.form {
+    color: #ffffff;
+}
+
+.form input {
+    padding: 10px 100px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    text-align: center;
+
+}
+
+.form label {
+    font-size: 20px;
+}
+
+.message input {
+    padding: 70px 100px;
+}
+
+.but button {
+
+    outline: none;
+    text-decoration: none;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 20px;
+
+}
+
+.but button {
+    border: 1px dotted #000000;
+    padding: 10px 153px;
+    border-radius: 7px;
+
+}
+
+.but button:hover {
+    background-color: #665d5d;
+
+}

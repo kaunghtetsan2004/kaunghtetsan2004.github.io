@@ -1,0 +1,51 @@
+/* ..........camera btn.......... */
+
+
+.filter_btn:link,
+.filter_btn:focus,
+.filter_btn:active,
+.filter_btn:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  color: #ff0000 !important;
+}
+
+
+
+
+/* ....x......camera btn....x...... */ 
+
+/* .........form-input-check......... */
+
+.card-header,
+.accordion-button,
+.panel-heading {
+    background-color: transparent !important;
+}
+
+.form-check-input:checked {
+    background-color: red !important;
+    border-color: red !important;
+    border: none;
+}
+
+.form-check-input:focus {
+    box-shadow: none !important;
+}
+
+/* .....x....form-input-check...x...... */
+
+/* ..................Len.................. */
+
+.len_img{
+    height: 250px;
+  /* Control image height */
+  object-fit: contain;
+  /* Prevent distortion */
+  padding: 20px;
+  /* Add breathing space */
+}
+
+/* .........x.........Len........x.......... */
+
+

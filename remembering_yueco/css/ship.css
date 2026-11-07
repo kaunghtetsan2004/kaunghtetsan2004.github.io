@@ -1,0 +1,179 @@
+/* ============================================================
+   YUECO — Premium Pickup Event
+   Strict 3-color system: white (#fff), black (#000), red (#f00)
+   No external fonts, no CDN assets — system font stack only.
+   Scope: body / base + the Premium Pickup Event section only.
+   Navbar, footer, and partners are left untouched.
+   ============================================================ */
+
+
+a {
+    color: #000;
+}
+
+::selection {
+    background: #f00;
+    color: #fff;
+}
+
+:focus-visible {
+    outline: 2px solid #f00;
+    outline-offset: 2px;
+}
+
+/* ---------- Hero / event section ---------- */
+.event-hero {
+    padding: 9rem 0 3rem;
+    text-align: center;
+}
+
+.event-hero .eyebrow {
+    font-size: .75rem;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: #f00;
+    font-weight: bold;
+}
+
+.event-hero .headline {
+    font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    color: #000;
+    margin: .8rem 0 .3rem;
+}
+
+.event-hero .headline em {
+    font-style: normal;
+    color: #f00;
+}
+
+.rule {
+    width: 70px;
+    height: 3px;
+    background: #f00;
+    margin: 1.5rem auto;
+}
+
+.event-intro {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.event-intro strong {
+    color: #f00;
+}
+
+.event-closing {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    max-width: 540px;
+    margin: 2.2rem auto 0;
+    line-height: 1.6;
+    border-top: 1px solid #000;
+    padding-top: 1.4rem;
+}
+
+/* ---------- Pickup tickets ---------- */
+.ticket-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 860px;
+    margin: 3rem auto 0;
+}
+
+.ticket {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    background: #fff;
+    border: 2px solid #000;
+    overflow: hidden;
+    text-align: left;
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.ticket:hover {
+    transform: translateY(-5px);
+    border-color: #f00;
+    box-shadow: 6px 6px 0 #000;
+}
+
+.ticket-main {
+    padding: 1.8rem 1.6rem;
+}
+
+.ticket-eyebrow {
+    font-size: .68rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: #f00;
+    font-weight: bold;
+    margin-bottom: .6rem;
+}
+
+.ticket-city {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin: 0 0 .35rem;
+}
+
+.ticket-date {
+    font-size: .85rem;
+    letter-spacing: .05em;
+    color: #000;
+    font-weight: bold;
+}
+
+.ticket-stub {
+    width: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px dashed #000;
+    position: relative;
+    background: #000;
+}
+
+.ticket-stub::before,
+.ticket-stub::after {
+    content: "";
+    position: absolute;
+    left: -7px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #000;
+}
+
+.ticket-stub::before {
+    top: -6px;
+}
+
+.ticket-stub::after {
+    bottom: -6px;
+}
+
+.ticket-mark {
+    font-size: .7rem;
+    letter-spacing: .16em;
+    color: #f00;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+@media (max-width: 576px) {
+    .event-hero {
+        padding: 7rem 0 2rem;
+    }
+}

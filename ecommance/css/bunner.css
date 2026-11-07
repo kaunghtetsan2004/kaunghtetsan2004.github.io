@@ -1,0 +1,7 @@
+
+carousel_image{
+    overflow: hidden !important;
+    width: 300px !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
