@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Calendar &amp; Clock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stage">
+
+  <!-- CALENDAR PANEL -->
+  <section class="panel panel--calendar">
+    <div class="panel-inner">
+      <header class="cal-header">
+        <h1 class="cal-title">
+          <span class="cal-title__month" id="calMonth">September</span>
+          <span class="cal-title__year" id="calYear">2026</span>
+        </h1>
+      </header>
+
+      <div class="cal-grid" id="calGrid" role="table" aria-label="Month calendar">
+        <!-- weekday row + day cells injected by script.js -->
+      </div>
+
+      <p class="cal-today" id="calToday">Thu, Sep 17 &mdash; today</p>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- CLOCK PANEL -->
+  <section class="panel panel--clock">
+    <div class="panel-inner">
+      <div class="clock" id="clock">
+        <div class="clock-face">
+          <div class="tick tick--12"></div>
+          <div class="tick tick--1"></div>
+          <div class="tick tick--2"></div>
+          <div class="tick tick--3"></div>
+          <div class="tick tick--4"></div>
+          <div class="tick tick--5"></div>
+          <div class="tick tick--6"></div>
+          <div class="tick tick--7"></div>
+          <div class="tick tick--8"></div>
+          <div class="tick tick--9"></div>
+          <div class="tick tick--10"></div>
+          <div class="tick tick--11"></div>
+
+          <span class="numeral numeral--xii">XII</span>
+          <span class="numeral numeral--iii">III</span>
+          <span class="numeral numeral--vi">VI</span>
+          <span class="numeral numeral--ix">IX</span>
+
+          <div class="hand hand--hour" id="hourHand"></div>
+          <div class="hand hand--minute" id="minuteHand"></div>
+          <div class="hand hand--second" id="secondHand"></div>
+          <div class="pivot"></div>
+        </div>
+      </div>
+
+      <p class="clock-digital" id="clockDigital">00:00:00</p>
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

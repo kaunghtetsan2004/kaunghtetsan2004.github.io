@@ -1,0 +1,12 @@
+.navbar-toggler:link,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.icon_color {
+   
+    color: #ffffff !important;
+}

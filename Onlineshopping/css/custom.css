@@ -1,0 +1,79 @@
+@import url(../css/fontss.css);
+
+
+:root {
+    /* theme font-family */
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin: 'Josefin', cursive;
+    --Lexned: 'Lexend', cursive;
+    --Livvic: 'Livvic', cursive;
+}
+
+* {
+    font-family: var(--Anton);
+}
+
+/* ........logo icon........ */
+
+.logo_icon {
+    width: 150px;
+}
+
+/* ....x....logo icon....x.... */
+
+
+/* ........Sec Nev Bar........ */
+
+.active {
+    color: #dc3545 !important;
+}
+
+.nav_hover:hover {
+    color: #dc3545 !important;
+}
+
+
+/* ....x....Sec Nev Bar...x..... */
+
+/* ..........Bunner.......... */
+
+.carousel_image {
+    height: 63vh;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+/* .....x.....Bunner....x...... */
+
+/* ...........Service........... */
+
+.service_icon {
+    width: 60px;
+    height: 60px;
+}
+
+.service_card:hover {
+    transform: translateY(-12px);
+    transition-duration: .3s;
+}
+
+/* ......x.....Service.....x...... */
+
+/* ............Promotion............ */
+
+.title_underline {
+    width: 100px;
+    height: 3px;
+    background-color: #dc3545;
+}
+
+.favouraite_button {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ........x....Promotion............ */

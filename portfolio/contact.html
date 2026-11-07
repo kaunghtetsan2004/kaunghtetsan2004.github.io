@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Kaung Htet San</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg nav_b">
+        <div class="container nav_box">
+            <a class="navbar-brand logo ms-3" href="index.html">Kaung Htet San</a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-bar bar-top"></span>
+                <span class="toggler-bar bar-mid"></span>
+                <span class="toggler-bar bar-bottom"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav_hover">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 my-2" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 my-2" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 my-2" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 my-2" href="project.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 my-2" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- page header -->
+    <section class="page_head">
+        <div class="container">
+            <span class="sec_eyebrow" data-reveal>Get In Touch</span>
+            <h1 data-reveal>Let's <span>Connect</span></h1>
+            <p data-reveal>Have a project, a question, or just want to say hi? My inbox is open.</p>
+        </div>
+    </section>
+
+    <section class="my-4">
+        <div class="container">
+            <div class="row g-4" data-reveal-stagger>
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <div class="c_icon"><i class="fa-solid fa-envelope"></i></div>
+                        <h5>Email</h5>
+                        <a href="mailto:kaunghtetsan200422@gmail.com">kaunghtetsan200422@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <div class="c_icon"><i class="fa-solid fa-phone"></i></div>
+                        <h5>Phone</h5>
+                        <a href="tel:+959887271766">+95 9887271766</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <div class="c_icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <h5>Location</h5>
+                        <p class="mb-0">Zalun, Ayeyarwady, Myanmar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-reveal>
+                    <div class="contact-form">
+                        <span class="sec_eyebrow">Send a Message</span>
+                        <h2 class="sec_title mb-4">Drop Me a <span class="hig_col">Line</span></h2>
+
+                        <form id="contactForm" novalidate>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subject">
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn_style1">Send Message</button>
+                                    <p id="formStatus" class="form-status hig_col"></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social_icon text-center mt-5" data-reveal-stagger>
+                <a href="#" class="mx-2" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="mx-2" aria-label="Viber"><i class="fa-brands fa-viber"></i></a>
+                <a href="#" class="mx-2" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="mx-2" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="mx-2" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="text-center text-black">Copyright &copy; <span id="year"></span> Kaung Htet San. All Rights
+                Reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="fontawesome/js/all.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

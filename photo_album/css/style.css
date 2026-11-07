@@ -1,0 +1,148 @@
+@import url(../css/fonts.css);
+
+
+:root {
+  /* theme font-family */
+  --Abel: 'Abel', cursive;
+  --Anton: 'Anton', cursive;
+  --Josefin: 'Josefin', cursive;
+  --Lexned: 'Lexend', cursive;
+  --Livvic: 'Livvic', cursive;
+  --Roboto: 'Roboto', cursive;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--Roboto);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff7f8;
+  color: #222;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  background: url('../assets/bg.png') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeUp 1.5s ease;
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 35px;
+}
+
+.counter-box {
+  width: 240px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.counter-box h2 {
+  font-size: 4rem;
+  margin: 10px 0;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 14px 35px;
+  border-radius: 50px;
+  background: #ff4d6d;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.hero-btn:hover{
+    transform: translateY(-5px);
+    background: #ff2d55;
+}
+
+.text-col {
+  color: #ff4d6d;
+}
+
+.underline{
+  width: 25%;
+  height: 5px;
+  background: #ff4d6d;
+}
+.card{
+  border: none;
+  text-decoration: none;
+  
+}
+
+.col-btn{
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #ff4d6d;
+  border: 3px solid #ff4d6d;
+  border-radius: 20px;
+  padding: 10px 80px 10px 80px;
+}
+
+.heart{
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  clip-path: path("M100 180 L20 100 A40 40 0 0 1 100 40 A40 40 0 0 1 180 100 Z");
+}
+
+.heart img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.pf-col{
+  color: #ff4d6d;
+  text-align: left;
+  padding-left: 40px;
+}
