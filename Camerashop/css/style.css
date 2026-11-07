@@ -1,0 +1,156 @@
+/* font-family */
+@import url('../css/font.css');
+
+:root {
+
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin: 'Josefin', cursive;
+    --Lexned: 'Lexend', cursive;
+    --Livvic: 'Livvic', cursive;
+}
+
+/* ....navbar .......... */
+
+
+/* search box */
+form {
+    background: #ffffff;
+    width: 370px;
+    height: 55px;
+    display: flex;
+}
+
+.search_box input {
+    padding: 10px 50px;
+    font-family: var(--Abel);
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 7px 0 0 7px;
+
+}
+
+
+.search_box button {
+    padding: 10px 30px;
+    border: 1px solid #000000;
+    border-radius: 0 7px 7px 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: var(--Abel);
+    cursor: pointer;
+}
+
+.search_box button:hover {
+    background-color: #ff0000;
+    color: #000000;
+}
+
+/* search box */
+li a {
+    font-family: var(--Livvic);
+    color: #ffffff;
+}
+
+
+
+
+/* ....navbar .......... */
+
+/*  .......Bunner....... */
+
+.site-title {
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    justify-content: center;
+    left: 30%;
+}
+
+.site-title{
+    color:#ffffff;
+}
+
+.site-title h3{
+    font-family: var(--Abel);
+}
+
+.site-title h1{
+    font-family: var(--Lexned);
+    letter-spacing: 3px;
+}
+
+button.btn {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+
+.site-title .btn {
+    margin: 1.8rem;
+    background: #ff0000;
+    color: #ffffff;
+}
+
+.site-title .btn:hover {
+    background: transparent;
+    border: 1px solid #000000;
+    color: #ff0000;
+}
+
+/*  .......Bunner....... */
+
+
+
+/*...........Main section........... */
+
+.main-text_1 {
+    font-family: var(--Livvic);
+}
+
+/* .........products......... */
+
+.container {
+    width: 100%;
+    background: rgb(252, 250, 250);
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container img {
+    width: 80%;
+    height: 50%;
+    margin-left: 30px;
+}
+
+.container p,
+h4,
+a {
+    font-family: var(--Abel);
+}
+
+
+
+/* .........products......... */
+
+
+/*...........Main section........... */
+
+
+@media only screen and (max-width:750px) {
+
+    .nav .nav-menu,
+    .nav .nav-items {
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse {
+        display: initial;
+    }
+}
