@@ -1,0 +1,37 @@
+@import url(../css/fontss.css);
+
+
+:root {
+    /* theme font-family */
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin: 'Josefin', cursive;
+    --Lexned: 'Lexend', cursive;
+    --Livvic: 'Livvic', cursive;
+}
+
+* {
+    font-family: var(--Lexned);
+}
+
+/* ........logo icon........ */
+
+.logo_icon {
+    width: 150px;
+}
+
+/* ....x....logo icon....x.... */
+
+
+/* ........Sec Nev Bar........ */
+
+.active {
+    color: #dc3545 !important;
+}
+
+.nav_hover:hover {
+    color: #dc3545 !important;
+}
+
+
+/* ....x....Sec Nev Bar...x..... */
