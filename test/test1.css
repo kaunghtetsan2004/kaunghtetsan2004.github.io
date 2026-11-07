@@ -1,0 +1,25 @@
+.grid div {
+    padding: 5px;
+    text-align: center;
+}
+
+
+
+.grid {
+    display: grid;
+    display: inline-block;
+    grid-template-rows: auto;
+
+}
+
+.block {
+    display: inline-block;
+}
+
+.ps {
+    position: absolute;
+    bottom: 5px;
+    right: 35%;
+    left: 45%;
+
+}

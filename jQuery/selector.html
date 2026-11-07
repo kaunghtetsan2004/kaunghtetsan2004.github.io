@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>jQuery Selector</h1>
+    <button id="click">Click</button>
+
+    <p class="jquery">jQuery is Easy to Use</p>
+    <p class="jquery">jQuery is a JavaScript Library</p>
+    <p class="jquery">jQuery is a fast and concise JavaScript Library</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <script>
+
+        $(document).ready(function(){
+            $('#click').click(function(){
+                alert("Hello World");
+            })
+        })
+
+    </script>
+
+    <script src="jquery.min.js"></script>
+</body>
+</html>
