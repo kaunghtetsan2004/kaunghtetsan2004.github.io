@@ -1,0 +1,267 @@
+    
+.color-btn{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:2px solid #ddd;
+    cursor:pointer;
+    margin-right:10px;
+}
+
+.color-black{
+    background:#000;
+}
+
+.color-white{
+    background:#fff;
+}
+
+/* Jacket */
+.color-khaki{
+    background: #b9ac98;
+}
+
+.size-btn{
+    min-width:60px;
+}
+
+.product-price{
+    font-size:32px;
+    font-weight:700;
+    color:#dc3545;
+}
+
+
+
+/* add to cart button */
+.btn-color{
+    color: #ffffff !important;
+    background-color: #f15a29 !important;
+}
+
+.btn-color:hover{
+    background-color: #f8f9fa !important;   /* light gray background */
+    color: #f15a29 !important;              /* dark text */
+    border: 1px solid #f15a29 !important;   /* dark border */
+    cursor: pointer;
+    width: 100%;
+}
+
+.carousel-item img{
+    height:550px;
+    object-fit:cover;
+}
+
+.form{
+    margin-top: 120px !important;
+}
+
+.input-box{
+    margin: auto;
+    /* border: solid 2px #000000 !important ; */
+    border-radius: 10px;
+    width: 70%;
+}
+
+
+
+.payment-form{
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Input Box */
+.payment-form .input-box{
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.payment-form .input-box input{
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background: #f3f3f3;
+    padding: 0 45px 0 20px;
+    font-size: 18px;
+    color: #000;
+}
+
+/* Placeholder */
+.payment-form .input-box input::placeholder{
+    color: #000;
+    opacity: 1;
+    font-size: 18px;
+}
+
+
+
+/* Focus */
+.payment-form .input-box input:focus{
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+
+/* Payment Method */
+.payment-method{
+    display: flex;
+    gap: 12px;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+
+.method-card{
+    flex: 1;
+}
+
+.method-card input{
+    display: none;
+}
+
+.method-card span{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    background: #f3f3f3;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    box-sizing: border-box;
+}
+
+.method-card input:checked + span{
+    background: #ff5a1f;
+    color: #fff;
+    border-color: #ff5a1f;
+}
+
+/* Upload Box */
+.upload-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 120px;
+    border: 2px dashed rgba(255,255,255,.3);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.upload-label:hover{
+    transform: translateY(-3px);
+}
+
+.upload-label i{
+    font-size: 24px;
+}
+
+/* Submit Button */
+.subMit{
+    
+    color: #ffffff !important;
+    background-color: #f15a29 !important;
+}
+
+.subMit:hover{
+    background-color: #f8f9fa !important;   /* light gray background */
+    color: #f15a29 !important;              /* dark text */
+    border: 1px solid #f15a29 !important;   /* dark border */
+    cursor: pointer;
+    width: 100%;
+}
+
+.confirm{
+    margin-top: 120px;
+}
+
+.confirm{
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid rgba(20, 18, 18, 0.15) ;
+    padding: 100px 200px;
+    border-radius: 12px;
+    
+}
+
+.circle{
+    margin: auto;
+    background-color: green;
+    color: #ffffff;
+    width: 10vh;
+    padding: 3vh;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.con_btn{
+    color: #ffffff;
+    background-color: #f15a29;
+    width: 150px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.table{
+    margin-top: 150px;
+}
+
+/* about.html */
+
+.about{
+    margin-top: 150px;
+}
+
+/* size guide */
+.size-guide{
+    width:100%;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+}
+
+.guide-btn{
+    width:100%;
+    padding:15px;
+    background:#fff;
+    border:1px solid #ddd;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    
+}
+
+.size-content{
+    display:none;
+    margin-top:10px;
+}
+
+.size-content img{
+    width:100%;
+}
+
+.icon{
+    font-size:24px;
+}
+
+/* .size-content{
+    display:none;
+    padding:15px 0;
+}
+
+.size-content img{
+    width:100%;
+    height:auto;
+    display:block;
+} */
+
+.size-content.active{
+    display:block;
+}
